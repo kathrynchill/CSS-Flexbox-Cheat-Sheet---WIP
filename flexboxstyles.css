@@ -3,7 +3,7 @@
     text-transform: lowercase;
     text-align: center;
     line-height: 1;
-    align: center;
+    background: white;
 }
 
 .header {
@@ -114,17 +114,35 @@ p {
     width: 100%;
     gap: 20px;
     padding: 0 10px;
+    overflow: visible;
 }
 
 .wrapper-items {
     margin: 0;
     flex: 0 1 45%;
     max-width: 45%;
+    min-width: 320px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper-items > .container {
+    margin: 5px 0;
 }
 
 .wrapper-items-column {
     width: 40%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+.wrapper-items-column > .container {
+    margin: 5px 0;
 }
 
 .width {
@@ -169,6 +187,7 @@ p {
 .wrap-nowrap {
     max-width: 300px;
     flex-shrink: 0;
+    overflow: visible;
 }
 
 .wrap-wrap {

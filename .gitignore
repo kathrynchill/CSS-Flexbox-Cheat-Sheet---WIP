@@ -1,0 +1,11 @@
+# Ignore the old .gitignore folder
+gitignore/
+
+# Ignore VSCode settings folder
+.vscode/
+
+# Ignore any temporary files
+*.tmp
+*.log
+.DS_Store
+thumbs.db
