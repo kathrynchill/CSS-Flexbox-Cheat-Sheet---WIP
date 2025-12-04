@@ -1,0 +1,22 @@
+Dark Pink
+#8a0045
+#a80054
+#bd005e
+#d10069
+#e60073
+#fa007d
+#ff0f87
+#ff1f8f
+#ff389c
+#ff4da6
+#ff61b0
+#ff7abd
+#ff8ac4
+#ff99cc
+#ffa8d4
+#ffb8db
+#ffc7e3
+#ffd6eb
+#ffe6f2
+#fff5fa
+Lignt Pink

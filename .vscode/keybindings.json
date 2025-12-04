@@ -1,0 +1,7 @@
+[
+  {
+    "key": "ctrl+alt+l",
+    "command": "extension.multiCommand.startLiveAndPreview",
+    "when": "editorTextFocus"
+  }
+]

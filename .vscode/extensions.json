@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ritwickdey.LiveServer",
+    "ms-vscode.live-server",
+    "auchenberg.vscode-browser-preview",
+    "ms-vscode.livepreview",
+    "ryuta46.multi-command"
+  ]
+}

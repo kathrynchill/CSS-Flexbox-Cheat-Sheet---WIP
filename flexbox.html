@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="flexboxstyles.css">
+  <link rel="stylesheet" href="flexboxstylestables.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <title>Flexbox Cheat Sheet</title>
+</head>
+<body>
+    <h1>Flexbox Cheat Sheet</h1>
+
+    <!-- Flexbox Display Section Begins-->
+    <section class="display">
+        <h2 class="header">Display</h2>
+        <!-- Flexbox Display: Flex Begins -->
+        <div class="wrapper">
+            <p class="title">Display: Flex</p>
+            <div class="container flex">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+            </div>
+            <p class="description">Display: Flex causes flex containers to act as a block element. The container will maintain the set or default dimensions.</p>
+        </div>
+        <!-- Flexbox Display: Flex Ends -->
+        <!-- Flexbox Display: Inline-Flex Begins -->
+        <div class="wrapper">
+            <p class="title">Display: Inline-Flex</p>
+            <div class="container inline-flex">
+                <div class="item">A</div>
+                <div class="item">B</div>
+                <div class="item">C</div>
+                <div class="item">D</div>
+                <div class="item">E</div>
+            </div>
+            <p class="description">Display: Inline-Flex causes flex containers to act as an inline-block element. If no dimensions are set for the container, it will only stretch to the size of its children.</p>
+        </div>
+        <!-- Flexbox Display: Inline-Flex Ends -->
+    </section>
+    <!-- Flexbox Display Section Ends-->
+    <br>
+    <br>
+    <!-- Flex Container Properties Section Begins-->
+    <section class="container-properties">
+        <h2 class="header">Flex Container Properties</h2>
+        <!-- Flex-Direction Master Section Begins-->
+        <section class="multi-container">
+            <h3 class="subheader">Flex-Direction</h3>
+            <p class="bold">The flex-direction property sets the direction in which the main axis is laid out. If it's associated with a row, the main axis will be horizontal. If it's associated with a column, the main axis will be vertical.</p>
+            <!-- Wrapper for all Flex-Direction Begins -->
+            <div class="wrapper multi-flex">
+                <div class="row-group">
+                    <!-- Flex Direction: Row Begins-->
+                    <div class="wrapper-items">
+                        <p class="title">Flex-Direction: Row</p>
+                        <div class="container flex width direction-row">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                        </div>
+                        <p class="description">Flex-Direction: Row is the default setting. It places flex items in an inline horizontal row on the main axis.</p>
+                    </div>
+                    <!-- Flex Direction: Row Ends-->
+                    <!-- Flex Direction: Row-Reverse Begins-->
+                    <div class="wrapper-items">
+                        <p class="title">Flex-Direction: Row-Reverse</p>
+                        <div class="container flex width direction-row-reverse">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                        </div>
+                        <p class="description">Flex-Direction: Row-Reverse places flex items in reverse order in an inline horizontalrow on the main axis.</p>
+                    </div>
+                    <!-- Flex Direction: Row-Reverse Ends-->
+                </div>
+                <div class="column-group">
+                    <!-- Flex Direction: Column Begins-->
+                    <div class="wrapper-items-column">
+                        <p class="title">Flex-Direction: Column</p>
+                        <div class="container flex width container-column direction-column">
+                            <div class="item column-item">A</div>
+                            <div class="item column-item">B</div>
+                            <div class="item column-item">C</div>
+                        </div>
+                        <p class="description">Flex-Direction: Column places flex items vertically along the main axis.</p>
+                    </div>
+                    <!-- Flex Direction: Column Ends-->
+                    <!-- Flex Direction: Column-Reverse Begins-->
+                    <div class="wrapper-items-column">
+                        <p class="title">Flex-Direction: Column-Reverse</p>
+                        <div class="container flex width container-column direction-column-reverse">
+                            <div class="item column-item">A</div>
+                            <div class="item column-item">B</div>
+                            <div class="item column-item">C</div>
+                        </div>
+                        <p class="description">Flex-Direction: Column-Reverse places flex items in reverse order vertically along the main axis.</p>
+                    </div>
+                    <!-- Flex Direction: Column-Reverse Ends-->
+                </div>
+            </div>
+            <!-- Wrapper for all Flex-Direction Ends -->
+        </section>
+        <!-- Flex-Direction Master Section Ends-->
+        <br>
+        <br>
+        <!-- Flex-Wrap Master Section Begins-->
+        <section class="multi-container">
+            <h3 class="subheader">Flex-Wrap</h3>
+            <p class="bold">The flex-wrap property allows flex items to wrap onto multiple flex lines (rows or columns of flex items) instead of having flex items overflow the container or shrink too small as they remain on one line.</p>
+            <!-- Wrapper for all Flex-Wrap Begins -->
+            <div class="wrapper multi-flex">
+                <!-- Flex Wrap: NoWrap Begins-->
+                <div class="wrapper-items">
+                    <p class="title">Flex-Wrap: NoWrap</p>
+                    <div class="container flex width wrap-nowrap">
+                        <div class="item">A</div>
+                        <div class="item">B</div>
+                        <div class="item">C</div>
+                        <div class="item">D</div>
+                        <div class="item">E</div>
+                    </div>
+                <p class="description">Flex-Wrap: NoWrap is the default setting. If the size of the flex items is greater than the size of the container, they will either overflow the container or shrink to fit depending on the property settings for the items.</p>
+                </div>
+                <!-- Flex Wrap: NoWrap Ends-->
+                <!-- Flex Wrap: Wrap Begins-->
+                <div class="wrapper-items">
+                    <p class="title">Flex-Wrap: Wrap</p>
+                    <div class="container flex width wrap-wrap">
+                        <div class="item">A</div>
+                        <div class="item">B</div>
+                        <div class="item">C</div>
+                        <div class="item">D</div>
+                        <div class="item">E</div>
+                    </div>
+                    <p class="description">Flex-Wrap: Wrap allows flex items to wrap onto multiple lines, preventing overflow and maintaining item size.</p>
+                </div>
+                <!-- Flex Wrap: Wrap Ends-->
+                <!-- Flex Wrap: Wrap-Reverse Begins-->
+                <div class="wrapper-items">
+                    <p class="title">Flex-Wrap: Wrap-Reverse</p>
+                    <div class="container flex width wrap-wrap-reverse">
+                        <div class="item">A</div>
+                        <div class="item">B</div>
+                        <div class="item">C</div>
+                        <div class="item">D</div>
+                        <div class="item">E</div>
+                    </div>
+                    <p class="description">Flex-Wrap: Wrap-Reverse allows flex items to wrap onto multiple lines in reverse order, preventing overflow and maintaining item size.</p>
+                </div>
+                <!-- Flex Wrap: Wrap-Reverse Ends-->
+            </div>
+            <!-- Wrapper for all Flex-Wrap Ends -->
+        </section>
+        <!-- Flex-Wrap Master Section Ends-->
+        <br>
+        <br>
+        <!-- Flex-Flow Master Section Begins-->
+        <section class="multi-container">
+            <h3 class="subheader">Flex-Flow</h3>
+            <p class="bold">The flex-flow property is shorthand for both flex-direction and flex-wrap. The values need to be added in that order. The following example is just one of many combinations. The chart contains all value combinations.</p>
+            <!-- Wrapper for all Flex-Flow Begins -->
+            <div class="wrapper multi-flex">
+                <!-- Flex-Flow: Column Wrap Begins-->
+                <div class="wrapper-items-column">
+                    <p class="title">Flex-Flow: Column Wrap</p>
+                    <div class="container flex width height container-column flow direction-column wrap-wrap">
+                        <div class="item column-item">A</div>
+                        <div class="item column-item">B</div>
+                        <div class="item column-item">C</div>
+                        <div class="item column-item">D</div>
+                        <div class="item column-item">E</div>
+                    </div>
+                    <p class="description">The above example shows the flex-flow: column wrap combination.</p>
+                </div>
+                <!-- Flex-Flow: Column Wrap Ends-->
+                <!-- Flex-Flow Value Chart Begins-->
+                <div class="wrapper-items">
+                    <p class="title">Flex-Flow Values</p>
+                    <p class="bold"> The table below shows all value combinations for flex-flow.</p>
+                    <p class="notation">Remember that <span class="highlight">flex-direction: row</span> and <span class="highlight">flex-wrap: nowrap</span> are the <span class="highlight">default settings</span>. If you want to use one or both of those, there is no need for this shorthand property.</p>
+                    <!-- Flex-Flow Table Begins-->
+                    <table class="flex-flow-table">
+                        <tr class="row1">
+                            <th>flex-flow:<br>
+                                row-reverse wrap</th>
+                            <td>reverses the order of items and wraps horizontal overflow to a new line.</td>
+                            <td class="cell">
+                                <div class="mini-container cell-wrapper mini-row-reverse-wrap">
+                                    <div class="mini-flex bg1 mini-row-reverse-wrap">
+                                        <div class="mini-item">1</div>
+                                        <div class="mini-item">2</div>
+                                        <div class="mini-item">3</div>
+                                        <div class="mini-item">4</div>
+                                        <div class="mini-item">5</div>
+                                        <div class="mini-item">6</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="row2">
+                            <th>flex-flow:<br>
+                                row-reverse wrap-reverse</th>
+                            <td>reverses the order of items and reverses the wrap order when moving horizontal overflow to a new line.</td>
+                            <td class="cell">
+                                <div class="mini-container cell-wrapper mini-row-reverse-wrap-reverse">
+                                    <div class="mini-flex bg2 mini-row-reverse-wrap-reverse">
+                                        <div class="mini-item">1</div>
+                                        <div class="mini-item">2</div>
+                                        <div class="mini-item">3</div>
+                                        <div class="mini-item">4</div>
+                                        <div class="mini-item">5</div>
+                                        <div class="mini-item">6</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="row1">
+                            <th>flex-flow:<br>
+                                column wrap</th>
+                            <td>places items vertically and wraps all overflowing items in a new column.</td>
+                            <td class="cell">
+                                <div class="mini-container cell-wrapper mini-column-wrap">
+                                    <div class="mini-flex bg1 mini-column-wrap">
+                                        <div class="mini-item">1</div>
+                                        <div class="mini-item">2</div>
+                                        <div class="mini-item">3</div>
+                                        <div class="mini-item">4</div>
+                                        <div class="mini-item">5</div>
+                                        <div class="mini-item">6</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="row2">
+                            <th>flex-flow:<br>
+                                column wrap-reverse</th>
+                            <td>Places items vertically and reverses the wrap order when placing overflowing items in a new column.</td>
+                            <td class="cell">
+                                <div class="mini-container cell-wrapper mini-column-wrap-reverse">
+                                    <div class="mini-flex bg2 mini-column-wrap-reverse">
+                                        <div class="mini-item">1</div>
+                                        <div class="mini-item">2</div>
+                                        <div class="mini-item">3</div>
+                                        <div class="mini-item">4</div>
+                                        <div class="mini-item">5</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="row1">
+                            <th>flex-flow:<br>
+                                column-reverse wrap</th>
+                            <td>Places items vertically in reverse order and wraps all overflowing items in a new column.</td>
+                            <td class="cell">
+                            <div class="mini-container cell-wrapper mini-column-reverse-wrap">
+                                <div class="mini-flex bg1 mini-column-reverse-wrap">
+                                    <div class="mini-item">1</div>
+                                    <div class="mini-item">2</div>
+                                    <div class="mini-item">3</div>
+                                    <div class="mini-item">4</div>
+                                    <div class="mini-item">5</div>
+                                </div>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr class="row2">
+                            <th>flex-flow:<br>
+                                column-reverse wrap-reverse</th>
+                            <td>Places items vertically in reverse orderand reverses the wrap order when placing overflowing items in a new column.</td>
+                            <td class="cell">
+                                <div class="mini-container cell-wrapper mini-column-reverse-wrap-reverse">
+                                    <div class="mini-flex bg2 mini-column-reverse-wrap-reverse">
+                                        <div class="mini-item">1</div>
+                                        <div class="mini-item">2</div>
+                                        <div class="mini-item">3</div>
+                                        <div class="mini-item">4</div>
+                                        <div class="mini-item">5</div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Flex-Flow Table Ends-->
+                </div>
+                <!-- Flex-Flow Value Chart Ends-->
+            </div>
+            <!-- Wrapper for all Flex-Flow Ends -->
+        </section>
+        <!-- Flex-Flow Master Section Ends-->
+
+    </section>
+    <!-- Flex Container Properties Section Ends-->
+</body>
+</html>
