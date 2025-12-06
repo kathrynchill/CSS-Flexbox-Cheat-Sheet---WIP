@@ -3,14 +3,17 @@ td {
 }
 
 th, td {
-    font-size: 8px;
-    border: 1px solid #ff1f8f;
+    font-size: 10px;
     padding: 4px;
     text-align: center;
-    min-height: 95px;
-    max-height: 95px;
     box-sizing: border-box;
     vertical-align: middle;
+}
+
+th:not(.nogridlines), td:not(.nogridlines) {
+    border: 1px solid #ff1f8f;
+    min-height: 95px;
+    max-height: 95px;
 }
 
 .cell {
@@ -22,6 +25,14 @@ table {
     border-spacing: 0;
     width: 95%;
     margin: 10px auto;
+}
+
+.table-width {
+    max-width: 700px;
+}
+
+.table-margin {
+    margin-top: -10px;
 }
 
 .row1 {
@@ -102,7 +113,7 @@ table {
 }
 
 .mini-column-wrap-reverse {
-    flex-flow: column-reverse wrap-reverse;
+    flex-flow: column wrap-reverse;
 }
 
 .mini-column-reverse-wrap {
@@ -112,3 +123,53 @@ table {
 .mini-column-reverse-wrap-reverse {
     flex-flow: column-reverse wrap-reverse;
 }
+
+.table-headers {
+    background-color: #8a0045;
+    font-weight: bold;
+    color: white;
+}
+
+.column-right-border {
+    border-right: 3px solid #8a004580;
+}
+
+/* Responsive styles for first table (table-width) only */
+@media (max-width: 768px) {
+    .table-width {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .table-width th,
+    .table-width td {
+        font-size: 8px;
+        padding: 3px;
+    }
+    
+    .table-width th:not(.nogridlines),
+    .table-width td:not(.nogridlines) {
+        min-height: 70px;
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-width {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .table-width th,
+    .table-width td {
+        font-size: 7px;
+        padding: 2px;
+    }
+    
+    .table-width th:not(.nogridlines),
+    .table-width td:not(.nogridlines) {
+        min-height: 60px;
+        max-height: 60px;
+    }
+}
+
