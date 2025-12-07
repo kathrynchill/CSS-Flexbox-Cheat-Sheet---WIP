@@ -188,6 +188,7 @@
     <!-- Flexbox Display Section Begins-->
     <section class="display">
         <h2 class="header">Display</h2>
+        <p class="bold">When a selector is given a property of <span class="highlight">display: flex</span> or <span class="highlight">display: inline-flex</span>, the selector becomes a flex container. All elements nested within the flex container become flex items. The flex container is the parent of the flex items and largely controls how the flex items behave within the container.</p>
         <!-- Flexbox Display: Flex Begins -->
         <div class="wrapper">
             <p class="title">Display: Flex</p>
@@ -221,6 +222,7 @@
     <!-- Flex Container Properties Section Begins-->
     <section class="container-properties">
         <h2 class="header">Flex Container Properties</h2>
+        <p class="bold">The following properties are set on the flex container. They are used to control the behavior of the flex items within the container.</p>
         <!-- Flex-Direction Master Section Begins-->
         <section class="multi-container">
             <h3 class="subheader">Flex-Direction</h3>
@@ -814,15 +816,357 @@
             <!-- Wrapper for all Align-Content Ends -->
     </section>
     <!-- Align-Content Master Section Ends-->
+    <br>
+    <br>
 
+    <!-- Gap Master Section Begins -->
+    <section class="multi-container">
+        <h3 class="subheader">The Gap Properties</h3>
+        <p class="bold">The <span class="highlight">gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
+        <!-- Wrapper for all Gap Begins -->
+        <div class="wrapper multi-flex">
+            <!-- Gap Shorthand Begins -->
+            <section class="multi-container gap-shorthand">
+                <h4 class="subheader-small">Gap Shorthand</h4>
+                <p class="bold">The <span class="highlight">gap</span> property is a shorthand property for the <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties. It can have one value for both the column and row gap, or two values for the column and row gap. The values are numerical measurements.</p>
+                <!-- Wrapper for all Gap Shorthand Begins -->
+                <div class="wrapper multi-flex">
+                    <!-- Gap Shorthand: One Value Begins -->
+                    <div class="wrapper-items container-width">
+                        <p class="title">Gap: One Value</p>
+                        <p class="bold">When a single value is used for the <span class="highlight">gap</span> property, it will be applied to both the <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span>. This means it will add an equal space both <span class="highlight">vertically</span> and <span class="highlight">horizontally</span>.</p>
+                        <div class="container flex width gap-container-1 gap-one-value">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                            <div class="item">D</div>
+                            <div class="item">E</div>
+                            <div class="item">F</div>
+                            <div class="item">G</div>
+                        </div>
+                        <br>
+                        <p class="notation">The above example shows a setting of <span class="highlight notation">gap: 20px</span></p>
+                    </div>
+                    <!-- Gap Shorthand: One Value Ends -->
+                    <!-- Gap Shorthand: Two Values Begins -->
+                    <div class="wrapper-items container-width">
+                        <p class="title">Gap: Two Values</p>
+                        <p class="bold">When two values are used for the <span class="highlight">gap</span> property, the first value will be applied to the <span class="highlight">column-gap</span> and the second value will be applied to the <span class="highlight">row-gap</span>.</p>
+                        <div class="container flex width gap-container-2 gap-two-values">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                            <div class="item">D</div>
+                            <div class="item">E</div>
+                            <div class="item">F</div>
+                            <div class="item">G</div>
+                        </div>
+                        <br>
+                        <p class="notation">The above example shows a setting of <span class="highlight notation">gap: 10px 30px</span></p>
+                    </div>
+                    <!-- Gap Shorthand: Two Values Ends -->
+                </div>
+                <!-- Wrapper for all Gap Shorthand Ends -->
+            </section>
+            <!-- Gap Shorthand Ends -->
+            <!-- Column-Gap and Row-Gap Begins -->
+            <section class="multi-container column-row-gap">
+                <h4 class="subheader-small">Column-Gap and Row-Gap</h4>
+                <p class="bold">The <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
+                <!-- Wrapper for all Column-Gap and Row-Gap Begins -->
+                <div class="wrapper multi-flex">
+                    <!-- Column-Gap Begins -->
+                    <div class="wrapper-items container-width">
+                        <p class="title">Column-Gap</p>
+                        <p class="bold">The <span class="highlight">column-gap</span> property adds consistent <span class="highlight">horizontal</span> spacing between flex items. This is the case no matter the value that is set for <span class="highlight">flex-direction</span>.</p>
+                        <div class="container flex width column-gap-container">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                            <div class="item">D</div>
+                            <div class="item">E</div>
+                            <div class="item">F</div>
+                            <div class="item">G</div>
+                        </div>
+                    </div>
+                    <!-- Column-Gap Ends -->
+                    <!-- Row-Gap Begins -->
+                    <div class="wrapper-items container-width">
+                        <p class="title">Row-Gap</p>
+                        <p class="bold">The <span class="highlight">row-gap</span> property adds consistent <span class="highlight">vertical</span> spacing between flex items. It is always apparent when <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, it is not apparent unless the items wrap to two or more flex lines.</p>
+                        <div class="container flex width row-gap-container">
+                            <div class="item">A</div>
+                            <div class="item">B</div>
+                            <div class="item">C</div>
+                            <div class="item">D</div>
+                            <div class="item">E</div>
+                            <div class="item">F</div>
+                            <div class="item">G</div>
+                        </div>
+                    </div>
+                    <!-- Row-Gap Ends -->
+                </div>
+                <!-- Wrapper for all Column-Gap and Row-Gap Ends -->
+            </section>
+            <!-- Column-Gap and Row-Gap Ends -->
+        </div>
+        <!-- Wrapper for all Gap Ends -->
+    </section>
+    </section>
+    <!-- Flex Container Properties Section Ends-->
+    <br>
+    <br>
+    <!-- Flex Item Properties Section Begins-->
+    <section class="item-properties">
+        <h2 class="header">Flex Item Properties</h2>
+        <p class="bold">The following properties are set on the flex items. They are used to control the behavior of the flex items within the container.</p>
+        <!-- Wrapper for all Flex Item Properties Begins -->
+        <div class="wrapper multi-flex">
+            <!-- Flex, Flex-Grow, Flex-Shrink, and Flex-Basis Begins -->
+            <section class="multi-container flex-properties">
+                <h3 class="subheader">The Flex Properties</h3>
+                <p class="bold">The <span class="highlight">flex</span> properties are used to control the sizing behavior of flex items. The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the available space of the flex container. The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. These can all be combined using the shorthand <span class="highlight">flex</span> property. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, the width of the items is affected. When <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set, the height of the items is affected. These properties will not override any max-width, min-width, max-height, or min-height properties if they have been set for the item.</p>
+                <!-- Flex-Grow Begins -->
+                <article class="flex-grow-section">
+                    <h4 class="subheader-small">Flex-Grow</h4>
+                    <p class="bold">The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">default value</span> is 0 which means the flex items do not grow by default. If the value is set to 1, the flex item will grow to fill the available space of the flex container. If the value is set to 2, the flex item will grow to fill twice the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting grows. Some examples can be found below.</p>
+                    <p class="notation">The following information will be valid for all examples:</p>
+                    <ul>
+                        <li class="smaller-list-text">The flex container has a static width of 320px.</li>
+                        <li class="smaller-list-text">All 3 flex items have a min width of 80px with no padding or margins, which means the minimum amount of space they will take up is 240px (80px x 3 = 240px).</li>
+                        <li class="smaller-list-text">This means the available space for the flex items to grow into is 80px (320px - 240px = 80px).</li>
+                    </ul>
+                    <!-- Flex-Grow Examples Begins -->
+                    <div class="row-group">
+                        <!-- Flex-Grow Example 1 Begins -->
+                        <div class="wrapper-example">
+                            <p class="example-text">Example 1: The <span class="highlight">flex-grow</span> value is set to 1 for all flex items.</p>
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text flex-grow">A<br>
+                                    flex-grow: 1<br>
+                                    width: 106.67px
+                                </div>
+                                <div class="item small-item-text flex-grow">B<br>
+                                    flex-grow: 1<br>
+                                    width: 106.67px
+                                </div>
+                                <div class="item small-item-text flex-grow">C<br>
+                                    flex-grow: 1<br>
+                                    width: 106.67px
+                                </div>
+                            </div>
+                            <p class="example-text"> Since the value is 1 for all items, they will all grow to fill the available space equally. This means each item will grow approximately 26.67px (80px / 3 = 26.67px). This gives each item a width of 106.67px (80px + 26.67px = 106.67px).</p>
+                        </div>
+                        <!-- Flex-Grow Example 1 Ends -->
+                        <!-- Flex-Grow Example 2 Begins -->
+                        <div class="wrapper-example">
+                            <p class="example-text">Example 2: The <span class="highlight">flex-grow</span> value is set to 0 (<span class="highlight">default value</span>) for items A and B, and 1 for item C.</p>
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text">A<br>
+                                    flex-grow: 0<br>
+                                    width: 80px
+                                </div>
+                                <div class="item small-item-text">B<br>
+                                    flex-grow: 0<br>
+                                    width: 80px
+                                </div>
+                                <div class="item small-item-text flex-grow">C<br>
+                                    flex-grow: 1<br>
+                                    width: 160px
+                                </div>
+                            </div>
+                            <p class="example-text"> Since the value is 0 for items A and B, they will not grow. Item C will grow to fill all of the available space. This means it will grow approximately 80px. This makes the total width for item C 160px (80px + 80px = 160px).</p>
+                        </div>
+                        <!-- Flex-Grow Example 2 Ends -->
+                        <!-- Flex-Grow Example 3 Begins -->
+                        <div class="wrapper-example">
+                            <p class="example-text">Example 3: The <span class="highlight">flex-grow</span> value is set to 0 for item A, 1 for item B, and 2 for item C.</p>
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text">A<br>
+                                    flex-grow: 0<br>
+                                    width: 80px
+                                </div>
+                                <div class="item small-item-text flex-grow">B<br>
+                                    flex-grow: 1<br>
+                                    width: 106.67px
+                                </div>
+                                <div class="item small-item-text flex-grow2">C<br>
+                                    flex-grow: 2<br>
+                                    width: 133.33px
+                                </div>
+                            </div>
+                            <p class="example-text">Since the value is 0 for item A, it will not grow. Item B has a value of 1, while item C has a value of 2. This means that item b will take up 1/3 of the available space, while item C will take up 2/3 of the available space. When the available space is divided by 3, the result is 26.67px (80px / 3 = 26.67px). This means item B will grow to 106.67px (80px + 26.67px = 106.67px) and item C will grow to 133.33px (80px + 26.67px + 26.67px = 133.33px).</p>
+                        </div>
+                        <!-- Flex-Grow Example 3 Ends -->
+                    </div>
+                    <!-- Flex-Grow Examples Ends -->
+                </article>
+                <!-- Flex-Grow Ends -->
+                <br>
+                <!-- Flex-Shrink Begins -->
+                <article class="flex-shrink-section">
+                    <h4 class="subheader-small">Flex-Shrink</h4>
+                    <p class="bold">The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the available space of the flex container. The <span class="highlight">default value</span> is 1 which means the flex items will shrink to fit the available space of the flex container. If the value is set to 0, the flex item will not shrink. If the value is set to 2, the flex item will shrink twice the amount of the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting shrinks. Some examples can be found below.</p>
+                    <p class="notation">The following information will be valid for all examples:</p>
+                    <ul>
+                        <li class="smaller-list-text">The flex container has a static width of 320px.</li>
+                        <li class="smaller-list-text">All 3 flex items have a set width of 160px with no padding or margins, which means the minimum amount of space they will take up is 480px (160px x 3 = 480px).</li>
+                        <li class="smaller-list-text">This means the items will be wider than the container, making the overflow width 160px (480px - 320px = 160px).</li>
+                    </ul>
+                    <!-- Flex-Shrink Examples Begins -->
+                    <!-- Flex-Shrink Example 1 Begins -->
+                    <div class="wrapper-example flex-shrink-example-1">
+                        <p class="example-text">Example 1: The <span class="highlight">flex-shrink</span> value is 0 for all items.</p>
+                        <div class="container flex width flex-item-property-container">
+                            <div class="item small-item-text larger-item flex-shrink">A<br>
+                                flex-shrink: 0<br>
+                                width: 160px
+                            </div>
+                            <div class="item small-item-text larger-item flex-shrink">B<br>
+                                flex-shrink: 0<br>
+                                width: 160px
+                            </div>
+                            <div class="item small-item-text larger-item flex-shrink">C<br>
+                                flex-shrink: 0<br>
+                                width: 160px
+                            </div>
+                        </div>
+                        <p class="example-text"> Since the value is 0 for all items, they will not shrink. This means the items will remain at their minimum width of 160px which will cause them to overflow the container by 160px (160px + 160px + 160px = 480px - 320px = 160px) since wrapping is not set.</p>
+                    </div>
+                    <!-- Flex-Shrink Example 1 Ends -->
+                    <br>
+                    <div class="row-group">
+                        <!-- Flex-Shrink Example 2 Begins -->
+                        <div class="wrapper-example">
+                            <p class="example-text">Example 2: The <span class="highlight">flex-shrink</span> value is set to 0 for item A, and 1 (<span class="highlight">default value</span>) for items B and C.</p>
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text larger-item flex-shrink">A<br>
+                                    flex-shrink: 0<br>
+                                    width: 160px
+                                </div>
+                                <div class="item small-item-text larger-item">B<br>
+                                    flex-shrink: 1<br>
+                                    width: 80px
+                                </div>
+                                <div class="item small-item-text larger-item">C<br>
+                                    flex-shrink: 1<br>
+                                    width: 80px
+                                </div>
+                            </div>
+                            <p class="example-text">Since the value is 0 for item A, it will not shrink. Items B and C have a value of 1, so they will shrink to fit the space of the container. In this case, both B and C would shrink by 1/2 of the overflow width, which is 80px (160px / 2 = 80px). This means item B and C will shrink to 80px (160px - 80px = 80px).</p>
+                        </div>
+                        <!-- Flex-Shrink Example 2 Ends -->
+                        <!-- Flex-Shrink Example 3 Begins -->
+                        <div class="wrapper-example">
+                            <p class="example-text">Example 3: The <span class="highlight">flex-shrink</span> value is set to 1 (<span class="highlight">default value</span>) for item A, 2 for item B, and 3 for item C.</p>
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text larger-item">A<br>
+                                    flex-shrink: 1<br>
+                                    width: 133.33px
+                                </div>
+                                <div class="item small-item-text larger-item flex-shrink2">B<br>
+                                    flex-shrink: 2<br>
+                                    width: 106.66px
+                                </div>
+                                <div class="item small-item-text larger-item flex-shrink3">C<br>
+                                    flex-shrink: 3<br>
+                                    width: 80px
+                                </div>
+                            </div>
+                            <p class="example-text">In this example, all 3 items will shrink to fit the container by different amounts. Item A has a value of 1, item B has a value of 2, and item C has a value of 3. This means item A will shrink by 1/6 of the overflow width, item B will shrink by 2/6 of the overflow width, and item C will shrink by 3/6 of the overflow width. The overflow width needs to be divided by 6 parts in this case (1 + 2 + 3 = 6). This gives us a unit number of 26.66px (160px / 6 = 26.66px). This means item A will shrink to 133.33px (160px - 26.66px = 133.33px), item B will shrink to 106.66px (160px - 53.33px = 106.66px), and item C will shrink to 80px (160px - 80px = 80px).</p>
+                        </div>
+                        <!-- Flex-Shrink Example 3 Ends -->
+                    </div>
+                    <!-- Flex-Shrink Examples Ends -->
+                </article>
+                <!-- Flex-Shrink Ends -->
+                <br>
+                <!-- Flex-Basis Begins -->
+                <article class="flex-basis-section">
+                    <h4 class="subheader-small">Flex-Basis</h4>
+                    <p class="bold">The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. The <span class="highlight">default value</span> is auto which means the initial size of the flex item is determined by the width or height set for the item. The value can be a length, a percentage, or an initial or inherit value. If a length or percentage is set for the <span class="highlight">flex-basis</span> property, it will override the width or height set for the item UNLESS it is min-width, max-width, min-height, or max-height. When a percentage is used as the value, it is relative to the width of the flex container.</p>
+                    <p class="notation">The following information will be valid for this example:</p>
+                    <ul>
+                        <li class="smaller-list-text">The flex container has a static width of 320px.</li>
+                        <li class="smaller-list-text">Items A and B have a set width of 160px with no padding or margins.</li>
+                        <li class="smaller-list-text">Item C has a set max-width and min-width of 120px with no padding or margins.</li>
+                    </ul>
+                    <!-- Flex-Basis Example Begins -->
+                    <div class="wrapper-example">
+                        <p class="example-text">Example 1: The <span class="highlight">flex-basis</span> value is set to 120px for item A, 25% for item B, and 100px for item C.</p>
+                        <div class="container flex width flex-item-property-container">
+                            <div class="item small-item-text larger-item flex-basis">A<br>
+                                flex-basis: 120px<br>
+                                set width: 160px<br>
+                                width: 120px
+                            </div>
+                            <div class="item small-item-text larger-item flex-basis-percentage">B<br>
+                                flex-basis: 25%<br>
+                                set-width: 160px<br>
+                                width: 80px
+                            </div>
+                            <div class="item small-item-text max-width-item flex-basis2">C<br>
+                                flex-basis: 100px<br>
+                                set max/min-width: 120px<br>
+                                width: 120px
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flex-Basis Example Ends -->
+                </article>
+                <!-- Flex-Basis Ends -->
+                <br>
+
+                <!-- Flex Shorthand Begins -->
+                <article class="flex-shorthand-section">
+                    <h4 class="subheader-small">Flex Shorthand</h4>
+                    <p class="bold">The <span class="highlight">flex</span> property is a shorthand property for the <span class="highlight">flex-grow</span>, <span class="highlight">flex-shrink</span>, and <span class="highlight">flex-basis</span> properties. It always affects all three properties, and can be specified using one, two, or three values.</p>
+                    <!-- Flex One Syntax Value Begins -->
+                    <p class="title">Flex: One Syntax Value</p>
+                    <p class="bold">When a single value is used for the <span class="highlight">flex</span> property, it must be one of the following:</p>
+                    <ul class="wider-list">
+                        <li><span class="highlight">Number:</span><br>
+                        When a number is the only value given, it will read as the <span class="highlight">flex-grow</span> value. When this is done, the <span class="highlight">flex-shrink</span> value is automatically set to 1 and the <span class="highlight">flex-basis</span> value is automatically set to 0. This means that the <span class="highlight">flex-basis</span> value will be dependent on the size created by the <span class="highlight">flex-grow</span> value. It also means that flex items will grow or shrink in the container.</li>
+                        <li><span class="highlight">Width (for rows) or Height (for columns):</span><br>
+                        When a width or height is the only value given, it will read as the <span class="highlight">flex-basis</span> value. When this is done, the <span class="highlight">flex-grow</span> value is automatically set to 1 and the <span class="highlight">flex-shrink</span> value is automatically set to 1. This means that flex items will grow or shrink in the container.</li>
+                        <li><span class="highlight">Keywords:</span><br>
+                        There are 3 keywords that can be used for the <span class="highlight">flex</span> property:
+                        <ul class="list-indent wider-list2">
+                            <li><span class="highlight">auto:</span><br>
+                            When auto is the only value given, the items are sized according to their width and height properties, and the <span class="highlight">flex-grow</span> and <span class="highlight">flex-shrink</span> values are set to 1. This means that flex items will grow or shrink in the container.</li>
+                            <li><span class="highlight">none:</span><br>
+                            When none is the only value given, the items are sized according to their width and height properties, and the <span class="highlight">flex-grow</span> and <span class="highlight">flex-shrink</span> values are set to 0. This means that flex items will not grow or shrink in the container.</li>
+                            <li><span class="highlight">initial:</span><br>
+                            When initial is the only value given, the items are sized according to their width and height properties, the <span class="highlight">flex-grow</span> property is automatically set to 0, and the <span class="highlight">flex-shrink</span> property is automatically set to 1. This means that flex items will shrink to fit the container when necessary, but they will not grow to fill the additional space in the container.</li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <div class="wrapper multi-flex">
+                        <div class="wrapper-items container-width">
+                            <div class="container flex width flex-item-property-container">
+                                <div class="item small-item-text flex-grow">A<br>
+                                    flex: 1<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flex One Syntax Value Ends -->
+                </article>
+                <!-- Flex Shorthand Ends -->
+
+
+
+            </section>
+            <!-- Flex, Flex-Grow, Flex-Shrink, and Flex-Basis Ends -->
+
+        </div>
+        <!-- Wrapper for all Flex Item Properties Ends -->
 
 
 
 
 
     </section>
-
-
-    <!-- Flex Container Properties Section Ends-->
+    <!-- Flex Item Properties Section Ends-->
 </body>
 </html>
