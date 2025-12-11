@@ -35,6 +35,12 @@ table {
     margin-top: -10px;
 }
 
+.flex-grow-example-table {
+    width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
 .row1 {
     background-color: #ffe6f2;
 }
@@ -133,6 +139,7 @@ table {
 .column-right-border {
     border-right: 3px solid #8a004580;
 }
+
 
 /* Responsive styles for first table (table-width) only */
 @media (max-width: 768px) {

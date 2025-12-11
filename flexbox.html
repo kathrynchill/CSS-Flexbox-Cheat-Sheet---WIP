@@ -930,10 +930,71 @@
                 <article class="flex-grow-section">
                     <h4 class="subheader-small">Flex-Grow</h4>
                     <p class="bold">The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">default value</span> is 0 which means the flex items do not grow by default. If the value is set to 1, the flex item will grow to fill the available space of the flex container. If the value is set to 2, the flex item will grow to fill twice the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting grows.</p>
+                    <p class="title">Flex-Grow Formula</p>
+                    <p class="bold">The size that the flex items will grow to fill the container can be determined by using all of the following calculations:</p>
+                    <ul class="wider-list no-bullet formula-list">
+                        <li class="bg1">Base Size = Sum of All Item Sizes </li>
+                        <li class="bg2">Available Space = Container Size - Base Size </li>
+                        <li class="bg1">Grow Factors = Sum of All Flex-Grow Values<br>
+                        <span class="notation">(each item's flex-grow defaults to 0 if not specified)</span> </li>
+                        <li class="bg2">Item Size = Base Size + Growth Factor </li>
+                        <li class="bg1">Grow Unit = Available Space/Grow Factors </li>
+                        <li class="bg2">Additional Size = Item Flex-Grow Value x Grow Unit </li>
+                        <li class="bg1">Final Size = Item Size + Additional Size </li>
+                    </ul>
+                    <br>
+                    <p class="title">Flex-Grow Examples</p><br>
+                    <p class="title-small">Written Example</p>
+                    <br>
+
+
+                    <div class="flex-grow-example-block">
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">The height of the flex container is 600px. It is set to flex-direction: column.</p>
+                            <img src="Images/Written Container Height Flex Direction.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">It contains the following four flex items:</p>
+                            <img src="Images/Written Item Height Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 1: Base Size = Sum of All Item Sizes</p>
+                            <img src="Images/Written Base Height Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 2: Available Space = Container Size - Base Size</p>
+                            <img src="Images/Written Available Space Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 3: Grow Factors = Sum of All Flex-Grow Values</p>
+                            <img src="Images/Written Grow Factors Flex Grow.png" class="flex-grow-shrink-example-image">
+                            <p class="example-text">When the <span class="highlight example-text">flex-grow</span> value is not specified for an item, it defaults to 0.</p>
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 4: Grow Unit = Available Space/Grow Factors</p>
+                            <img src="Images/Written Grow Unit Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 5: Additional Size = Item Flex-Grow Value x Grow Unit</p>
+                            <img src="Images/Written Additional Height Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-grow-example-step">
+                            <p class="written-example-text">Step 6: Final Size = Item Size + Additional Size</p>
+                            <img src="Images/Written Final Size Flex Grow.png" class="flex-grow-shrink-example-image">
+                        </div>
+                    </div>
 
 
 
-                    
+                    <p class="title-small">Visual Examples</p>
+                    <br>
                     <p class="notation">The following information will be valid for all examples:</p>
                     <ul>
                         <li class="smaller-list-text">The flex container has a static width of 320px.</li>
