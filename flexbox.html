@@ -937,10 +937,9 @@
                         <li class="bg2">Available Space = Container Size - Base Size </li>
                         <li class="bg1">Grow Factors = Sum of All Flex-Grow Values<br>
                         <span class="notation">(each item's flex-grow defaults to 0 if not specified)</span> </li>
-                        <li class="bg2">Item Size = Base Size + Growth Factor </li>
-                        <li class="bg1">Grow Unit = Available Space/Grow Factors </li>
-                        <li class="bg2">Additional Size = Item Flex-Grow Value x Grow Unit </li>
-                        <li class="bg1">Final Size = Item Size + Additional Size </li>
+                        <li class="bg2">Grow Unit = Available Space/Grow Factors </li>
+                        <li class="bg1">Additional Size = Item Flex-Grow Value x Grow Unit </li>
+                        <li class="bg2">Final Size = Base Size + Additional Size </li>
                     </ul>
                     <br>
                     <p class="title">Flex-Grow Examples</p><br>
@@ -950,7 +949,8 @@
 
                     <div class="flex-grow-example-block">
                         <div class="flex-grow-example-step">
-                            <p class="written-example-text">The height of the flex container is 600px. It is set to flex-direction: column.</p>
+                            <p class="written-example-text">The height of the flex container is 600px.<br>
+                            It is set to flex-direction: column.</p>
                             <img src="Images/Written Container Height Flex Direction.png" class="flex-grow-shrink-example-image">
                         </div>
 
@@ -995,6 +995,63 @@
 
                     <p class="title-small">Visual Examples</p>
                     <br>
+                    <p class="notation">Here is a visual representation of the written example:</p>
+                    
+                    <div class="row-group">
+                        <div class="wrapper-example">
+                            <p class="example-text">The container and items without <span class="highlight example-text">flex-grow</span> values:</p>
+                            <div class="container flex width flex-item-property-container written-grow-shrink-container scale-down-25">
+                                <div class="item small-item-text written-grow1">Item One<br>
+                                    original height: 50px<br>
+                                </div>
+                                <div class="item small-item-text written-grow2">Item Two<br>
+                                    original height: 100px<br>
+                                </div>
+                                <div class="item small-item-text written-grow3">Item Three<br>
+                                    original height: 75px<br>
+                                </div>
+                                <div class="item small-item-text written-grow4">Item Four<br>
+                                    original height: 125px<br>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="wrapper-example">
+                            <p class="example-text">The container and items with <span class="highlight example-text">flex-grow</span> values:</p>
+                            <div class="container flex width flex-item-property-container written-grow-shrink-container scale-down-25">
+                                <div class="item small-item-text flex-grow3 written-grow1">Item One<br>
+                                    flex-grow: 3<br>
+                                    original height: 50px<br>
+                                    final height: 200px
+                                </div>
+                                <div class="item small-item-text written-grow2">Item Two<br>
+                                    flex-grow: 0<br>
+                                    original height: 100px<br>
+                                    final height: 100px
+                                </div>
+                                <div class="item small-item-text flex-grow2 written-grow3">Item Three<br>
+                                    flex-grow: 2<br>
+                                    original height: 75px<br>
+                                    final height: 175px
+                                </div>
+                                <div class="item small-item-text written-grow4">Item Four<br>
+                                    flex-grow: 0<br>
+                                    original height: 125px<br>
+                                    final height: 125px
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                     <p class="notation">The following information will be valid for all examples:</p>
                     <ul>
                         <li class="smaller-list-text">The flex container has a static width of 320px.</li>
@@ -1072,10 +1129,130 @@
                 <article class="flex-shrink-section">
                     <h4 class="subheader-small">Flex-Shrink</h4>
                     <p class="bold">The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the flex container if the items are overflowing. The <span class="highlight">default value</span> is 1 which means the flex items will shrink to fit the flex container if they are overflowing. If the value is set to 0, the flex item will not shrink. If the value is set to 2, the flex item will shrink twice the amount to fit the container, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting shrinks. Unlike the <span class="highlight">flex-grow</span> property, the <span class="highlight">flex-shrink</span> property requires a shrink percentage to be calculated when items are different sizes.</p>
+                    <p class="title">Flex-Shrink Formula</p>
+                    <p class="bold">The size that the flex items will shrink to fit the container can be calculated in a similar way to the <span class="highlight">flex-grow</span> formula when all flex items are the same size. However, when the flex items are different sizes, the formula is slightly more complex as shown in the following calculations:</p>
+                    <ul class="wider-list no-bullet formula-list">
+                        <li class="bg1">Base Size = Sum of All Item Sizes </li>
+                        <li class="bg2">Overflow Amount = Base Size - Container Size </li>
+                        <li class="bg1">Item Shrink Contribution = Item Size x Item Flex-Shrink Value<br>
+                        <span class="notation">(each item's flex-shrink defaults to 1 if not specified)</span> </li>
+                        <li class="bg2">Total Shrink Contribution = Sum of All Item Shrink Contributions </li>
+                        <li class="bg1">Shrink Factor = Overflow Amount/Total Shrink Contribution </li>
+                        <li class="bg2">Shrink Amount = Item Shrink Contribution x Shrink Factor </li>
+                        <li class="bg1">Final Size = Item Size - Shrink Amount </li>
+                    </ul>
+                    <br>
+                    <p class="title">Flex-Shrink Examples</p><br>
+                    <p class="title-small">Written Example</p>
+                    <br>
+
+                    <div class="flex-shrink-example-block">
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">The height of the flex container is 600px.<br>
+                            It is set to flex-direction: column.</p>
+                            <img src="Images/Written Container Height Flex Direction.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">It contains the following four flex items:</p>
+                            <img src="Images/Written Height Flex Shrink Items.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 1: Base Size = Sum of All Item Sizes</p>
+                            <img src="Images/Written Base Height Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 2: Overflow Amount = Base Size - Container Size</p>
+                            <img src="Images/Written Overflow Height Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 3: Item Shrink Contribution = Item Size x Item Flex-Shrink Value</p>
+                            <img src="Images/Written Item Shrink Contribution Flex Shrink.png" class="flex-grow-shrink-example-image">
+                            <p class="example-text">When the <span class="highlight example-text">flex-shrink</span> value is not specified for an item, it defaults to 1.</p>
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 4: Total Shrink Contribution = Sum of All Item Shrink Contributions</p>
+                            <img src="Images/Written Total Shrink Contribution Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 5: Shrink Factor = Overflow Amount/Total Shrink Contribution</p>
+                            <img src="Images/Written Shrink Factor Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 6: Shrink Amount = Item Shrink Contribution x Shrink Factor</p>
+                            <img src="Images/Written Shrink Amount Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+
+                        <div class="flex-shrink-example-step">
+                            <p class="written-example-text">Step 7: Final Size = Item Size - Shrink Amount</p>
+                            <img src="Images/Written Final Height Flex Shrink.png" class="flex-grow-shrink-example-image">
+                        </div>
+                    </div>
 
 
 
-                    <p class="notation">The first three examples demonstrate the <span class="highlight notation">flex-shrink</span> property with flex items that are all the same size. The following information will be valid for the first 3 examples:</p>
+                    <p class="title-small">Visual Examples</p>
+                    <br>
+                    <p class="notation">Here is a visual representation of the written example:</p>
+
+
+                    
+                    <div class="row-group">
+                        <div class="wrapper-example overflow-spacing">
+                            <p class="example-text">The container and items without <span class="highlight example-text">flex-shrink</span> values:</p>
+                            <div class="container flex width flex-item-property-container written-grow-shrink-container scale-down-25">
+                                <div class="item small-item-text flex-shrink written-shrink1">Item One<br>
+                                    original height: 200px<br>
+                                </div>
+                                <div class="item small-item-text  flex-shrink written-shrink2">Item Two<br>
+                                    original height: 160px<br>
+                                </div>
+                                <div class="item small-item-text flex-shrink written-shrink3">Item Three<br>
+                                    original height: 40px<br>
+                                </div>
+                                <div class="item small-item-text flex-shrink written-shrink4">Item Four<br>
+                                    original height: 320px<br>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="wrapper-example">
+                            <p class="example-text">The container and items with <span class="highlight example-text">flex-shrink</span> values:</p>
+                            <div class="container flex width flex-item-property-container written-grow-shrink-container scale-down-25">
+                                <div class="item small-item-text written-shrink1">Item One<br>
+                                    flex-shrink: 1<br>
+                                    original height: 200px<br>
+                                    final height: 150px
+                                </div>
+                                <div class="item small-item-text written-shrink2">Item Two<br>
+                                    flex-shrink: 1<br>
+                                    original height: 160px<br>
+                                    final height: 120px
+                                </div>
+                                <div class="item small-item-text flex-shrink3 written-shrink3">Item Three<br>
+                                    flex-shrink: 3<br>
+                                    original height: 40px final height: 10px
+                                </div>
+                                <div class="item small-item-text flex-shrink written-shrink4">Item Four<br>
+                                    flex-shrink: 0<br>
+                                    original height: 320px<br>
+                                    final height: 320px
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <p class="notation">The following three examples demonstrate the <span class="highlight notation">flex-shrink</span> property with flex items that are all the same size. The following information will be valid for the first 3 examples:</p>
                     <ul>
                         <li class="smaller-list-text">The flex container has a static width of 320px.</li>
                         <li class="smaller-list-text">All 3 flex items have a set width of 160px with no padding or margins, which means the minimum amount of space they will take up is 480px (160px x 3 = 480px).</li>

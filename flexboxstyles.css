@@ -4,7 +4,7 @@
     text-align: center;
     line-height: 1;
     background: white;
-}
+} 
 
 br {
     margin-bottom: 5px;
@@ -229,6 +229,54 @@ ul.formula-list li {
 .flex-item-property-container {
     min-width: 323px;
     max-width: 323px;
+}
+
+.written-grow-shrink-container {
+    flex-direction: column;
+    height: 600px;
+    max-height: 600px;
+    min-height: 600px;
+    width: 300px;
+}
+
+/* Scale down containers by 25% (75% of original size) */
+.written-grow-shrink-container.scale-down-25 {
+    height: 450px;
+    max-height: 450px;
+    min-height: 450px;
+    width: 225px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-grow1 {
+    height: 37.5px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-grow2 {
+    height: 75px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-grow3 {
+    height: 56.25px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-grow4 {
+    height: 93.75px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-shrink1 {
+    height: 150px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-shrink2 {
+    height: 120px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-shrink3 {
+    height: 30px;
+}
+
+.written-grow-shrink-container.scale-down-25 .written-shrink4 {
+    height: 240px;
 }
 
 .container.inline-flex {
@@ -495,7 +543,7 @@ img {
     object-fit: none;
 }
 
-.flex-grow-example-block {
+.flex-grow-example-block, .flex-shrink-example-block {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -505,7 +553,7 @@ img {
     box-sizing: border-box;
 }
 
-.flex-grow-example-step {
+.flex-grow-example-step, .flex-shrink-example-step {
     flex: 0 1 auto;
     min-width: 280px;
     max-width: 100%;
@@ -588,6 +636,10 @@ img {
     flex-grow: 2;
 }
 
+.item.flex-grow3 {
+    flex-grow: 3;
+}
+
 .item.flex-shrink {
     flex-shrink: 0;
 }
@@ -612,6 +664,43 @@ img {
     flex-basis: 100px;
 }
 
+.written-grow1 {
+    height: 50px;
+}
+
+.written-grow2 {
+    height: 100px;
+}
+
+.written-grow3 {
+    height: 75px;
+}
+
+.written-grow4 {
+    height: 125px;
+}
+
+.written-shrink1 {
+    height: 200px;
+}
+
+.written-shrink2 {
+    height: 160px;
+}
+
+.written-shrink3 {
+    height: 40px;
+}
+
+.written-shrink4 {
+    height: 320px;
+}
+
+
+.wrapper-example.overflow-spacing {
+    margin-bottom: 150px;
+    padding-bottom: 0;
+}
 
 
 /* Mobile responsive styles */
