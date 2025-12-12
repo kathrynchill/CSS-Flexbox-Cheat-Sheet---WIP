@@ -1386,26 +1386,65 @@
                         </ul>
                         </li>
                     </ul>
-                    <div class="wrapper multi-flex">
-                        <div class="wrapper-items container-width">
-                            <div class="container flex width flex-item-property-container">
-                                <div class="item small-item-text flex-grow">A<br>
-                                    flex: 1<br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Flex One Syntax Value Ends -->
+                    <!-- Flex Two Syntax Value Begins -->
+                    <p class="title">Flex: Two Syntax Values</p>
+                    <p class="bold">When two values are used for the <span class="highlight">flex</span> property, the first value must be a number to represent the <span class="highlight">flex-grow</span> value.<br> </p>
+                    <p class="bold">The second value must be one of the following:</p>
+                    <ul class="wider-list">
+                        <li><span class="highlight">Number:</span><br>
+                        When a number is given as the second value, it will read as the <span class="highlight">flex-shrink</span> value. The <span class="highlight">flex-basis</span> value is automatically set to 0% (auto).</li>
+                        <li><span class="highlight">A Valid Flex-Basis Value:</span> When a <span class="highlight">flex-basis</span> value is given as the second value, the <span class="highlight">flex-shrink</span> value is automatically set to its default value of 1.</li>
+                    </ul>
+                    <!-- Flex Two Syntax Value Ends -->
+                    <!-- Flex Three Syntax Value Begins -->
+                    <p class="title">Flex: Three Syntax Values</p>
+                    <p class="bold">When three values are used for the <span class="highlight">flex</span> property, the first value is the <span class="highlight">flex-grow</span> value, the second value is the <span class="highlight">flex-shrink</span> value, and the third value is the <span class="highlight">flex-basis</span> value.</p>
+                    <!-- Flex Three Syntax Value Ends -->
                 </article>
                 <!-- Flex Shorthand Ends -->
-
-
-
             </section>
             <!-- Flex, Flex-Grow, Flex-Shrink, and Flex-Basis Ends -->
+            <br>
+
 
         </div>
         <!-- Wrapper for all Flex Item Properties Ends -->
+        <br>
+        <br>
+        <!-- Align-Self Master Section Begins -->
+        <h3 class="subheader">Align-Self</h3>
+        <p class="bold">The <span class="highlight">align-self</span> property allows the flex item to override the <span class="highlight">align-items</span> value that is set for the container. It can be used to align the item to the start, end, center, or baseline of the <span class="highlight">cross axis</span>.</p>
+        <div class="wrapper multi-flex">
+            <div class="wrapper-items container-width">
+                <p class="title">Align-Items Example</p>
+                <div class="container flex width align-items-container align-items-flex-start justify-content-center">
+                    <div class="item">A</div>
+                    <div class="item align-self-end">B</div>
+                    <div class="item">C</div>
+                </div>
+                <p class="description">The above example has a flex container with the <span class="highlight">align-items</span> property set to flex-start. The <span class="highlight">align-self</span> property is set to flex-end for item B, which overrides the <span class="highlight">align-items: flex-start</span> value in the flex container.</p>
+                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+            </div>
+        </div>
+        <!-- Align-Self Master Section Ends -->
+        <br>
+        <br>
+        <!-- Order Master Section Begins -->
+        <h3 class="subheader">Order</h3>
+        <p class="bold">The <span class="highlight">order</span> property allows the flex item to override the order of the flex items in the container. By <span class="highlight">default</span>, the order of the flex items is set to 0 which means that the HTML elements are listed in the same order that they are listed in the HTML document. If a reverse direction is set for the <span class="highlight">flex-direction</span> property, the order of the flex items will be listed in the reverse order that they are listed in the HTML document. To completely customize the order of the flex items, the <span class="highlight">order</span> property can be used.</p>
+        <div class="wrapper multi-flex">
+            <div class="wrapper-items container-width">
+                <p class="title">Order Example</p>
+                <div class="container flex width align-items-container align-items-center">
+                    <div class="item order3">A</div>
+                    <div class="item order1">B</div>
+                    <div class="item order2">C</div>
+                </div>
+                <p class="description">The above example has a flex container with the <span class="highlight">order</span> property set to 3 for item A, 1 for item B, and 2 for item C. This means that item A will be the last item in the container, item B will be the first item in the container, and item C will be the second item in the flex container.</p>
+            </div>
+        </div>
+        <!-- Order Master Section Ends -->
 
 
 

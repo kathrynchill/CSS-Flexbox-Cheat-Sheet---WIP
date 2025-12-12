@@ -696,6 +696,22 @@ img {
     height: 320px;
 }
 
+.align-self-end {
+    align-self: flex-end;
+}
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
 
 .wrapper-example.overflow-spacing {
     margin-bottom: 150px;
