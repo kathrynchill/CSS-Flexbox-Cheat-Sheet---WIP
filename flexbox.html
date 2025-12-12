@@ -6,27 +6,181 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="flexboxstyles.css">
   <link rel="stylesheet" href="flexboxstylestables.css">
+  <link rel="stylesheet" href="flexboxstylesnav.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
   <title>Flexbox Cheat Sheet</title>
 </head>
 <body>
-    <h1>Flexbox Cheat Sheet</h1>
+    
+    <header class="site-header">
+        <nav class="topnav">
+          <div class="topnav-inner">
+            <a href="#flexbox-cheat-sheet" class="topnav-title">Flexbox Cheat Sheet</a>
+            
+            <!-- Mobile menu toggle - CSS only using checkbox -->
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+            <label for="mobile-menu-toggle" class="mobile-menu-label">
+              <span class="heart-icon">♥</span>
+            </label>
+      
+            <ul class="topnav-links">
+              <!-- Flexbox Axes -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Axes</summary>
+                  <ul class="submenu">
+                    <li class="submenu-back"><a href="flexbox.html">← BACK</a></li>
+                    <li class="masterlink"><a href="#flexbox-axes">Axes</a></li>
+                    <li class="sublink"><a href="#main-cross-axis">Main Axis &amp; Cross Axis</a></li>
+                    <li class="sublink"><a href="#main-cross-terms">Main &amp; Cross Terms</a></li>
+                  </ul>
+                </details>
+              </li>
+      
+              <!-- Display -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Display</summary>
+                  <ul class="submenu">
+                    <li class="submenu-back"><a href="flexbox.html">← BACK</a></li>
+                    <li class="masterlink"><a href="#display">Display</a></li>
+                    <li class="sublink"><a href="#display-flex">Display: Flex</a></li>
+                    <li class="sublink"><a href="#display-inline-flex">Display: Inline-Flex</a></li>
+                  </ul>
+                </details>
+              </li>
+      
+              <!-- Flex Container Properties -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Flex Container</summary>
+                  <ul class="submenu">
+                    <li class="submenu-back"><a href="flexbox.html">← BACK</a></li>
+                    <li class="masterlink"><a href="#flex-container">Flex Container Properties</a></li>
+      
+                    <li class="sublink">
+                      <a href="#flex-direction">Flex-Direction</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#flex-direction-row">Flex-Direction: Row</a></li>
+                        <li><a href="#flex-direction-row-reverse">Flex-Direction: Row-Reverse</a></li>
+                        <li><a href="#flex-direction-column">Flex-Direction: Column</a></li>
+                        <li><a href="#flex-direction-column-reverse">Flex-Direction: Column Reverse</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink">
+                      <a href="#flex-wrap">Flex-Wrap</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#flex-wrap-no-wrap">Flex-Wrap: NoWrap</a></li>
+                        <li><a href="#flex-wrap-wrap">Flex-Wrap: Wrap</a></li>
+                        <li><a href="#flex-wrap-wrap-reverse">Flex-Wrap: Wrap-Reverse</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink"><a href="#flex-flow">Flex-Flow</a></li>
+      
+                    <li class="sublink">
+                      <a href="#justify-content">Justify-Content</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#justify-content-flex-start">Justify-Content: Flex-Start</a></li>
+                        <li><a href="#justify-content-flex-end">Justify-Content: Flex-End</a></li>
+                        <li><a href="#justify-content-center">Justify-Content: Center</a></li>
+                        <li><a href="#justify-content-space-between">Justify-Content: Space-Between</a></li>
+                        <li><a href="#justify-content-space-around">Justify-Content: Space-Around</a></li>
+                        <li><a href="#justify-content-space-evenly">Justify-Content: Space-Evenly</a></li>
+                        <li><a href="#justify-content-inherit">Justify-Content: Inherit</a></li>
+                        <li><a href="#justify-content-initial">Justify-Content: Initial</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink">
+                      <a href="#align-items">Align-Items</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#align-items-stretch">Align-Items: Stretch</a></li>
+                        <li><a href="#align-items-flex-start">Align-Items: Flex-Start</a></li>
+                        <li><a href="#align-items-flex-end">Align-Items: Flex-End</a></li>
+                        <li><a href="#align-items-center">Align-Items: Center</a></li>
+                        <li><a href="#align-items-baseline">Align-Items: Baseline</a></li>
+                        <li><a href="#align-items-inherit">Align-Items: Inherit</a></li>
+                        <li><a href="#align-items-initial">Align-Items: Initial</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink">
+                      <a href="#align-content">Align-Content</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#align-content-stretch">Align-Content: Stretch</a></li>
+                        <li><a href="#align-content-flex-start">Align-Content: Flex-Start</a></li>
+                        <li><a href="#align-content-flex-end">Align-Content: Flex-End</a></li>
+                        <li><a href="#align-content-center">Align-Content: Center</a></li>
+                        <li><a href="#align-content-space-between">Align-Content: Space-Between</a></li>
+                        <li><a href="#align-content-space-around">Align-Content: Space-Around</a></li>
+                        <li><a href="#align-content-space-evenly">Align-Content: Space-Evenly</a></li>
+                        <li><a href="#align-content-inherit">Align-Content: Inherit</a></li>
+                        <li><a href="#align-content-initial">Align-Content: Initial</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink">
+                      <a href="#gap-properties">The Gap Properties</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#gap-shorthand">Gap Shorthand</a></li>
+                        <li><a href="#column-row-gap">Column-Gap and Row-Gap</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+      
+              <!-- Flex Item Properties -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Flex Items</summary>
+                  <ul class="submenu">
+                    <li class="submenu-back"><a href="flexbox.html">← BACK</a></li>
+                    <li class="masterlink"><a href="#flex-item">Flex Item Properties</a></li>
+      
+                    <li class="sublink">
+                      <a href="#flex-properties">The Flex Properties</a>
+                      <ul class="subsubmenu">
+                        <li><a href="#flex-grow">Flex-Grow</a></li>
+                        <li><a href="#flex-shrink">Flex-Shrink</a></li>
+                        <li><a href="#flex-basis">Flex-Basis</a></li>
+                        <li><a href="#flex-shorthand">Flex Shorthand</a></li>
+                      </ul>
+                    </li>
+      
+                    <li class="sublink"><a href="#align-self">Align-Self</a></li>
+                    <li class="sublink"><a href="#order">Order</a></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      
+    
+    
+    
+    
+    <h1 id="flexbox-cheat-sheet">Flexbox Cheat Sheet</h1>
 
     <!-- Flexbox Axes Section Begins-->
     <section class="axes">
-        <h2 class="header">Flexbox Axes</h2>
+        <h2 class="header" id="flexbox-axes">Flexbox Axes</h2>
         <!-- Main and Cross Axis Begins-->
         <div class="wrapper">
-            <h3 class="subheader">Main Axis & Cross Axis</h3>
+            <h3 class="subheader" id="main-cross-axis">Main Axis & Cross Axis</h3>
             <p class="bold">The <span class="highlight">main axis</span> is the axis along which flex items are laid out. It is defined by the <span class="highlight">flex-direction</span> property.</p>
             <p class="bold">The <span class="highlight">cross axis</span> is perpendicular to the <span class="highlight">main axis</span>. It determines the direction in which flex lines will be added when wrapping is set via the <span class="highlight">flex-flow</span> property.</p>
         </div>
         <!-- Main and Cross Axis Ends-->
         <!-- Main and Cross Terms Begins-->
         <div class="wrapper images">
-            <h3 class="subheader">Main & Cross Terms</h3>
+            <h3 class="subheader" id="main-cross-terms">Main & Cross Terms</h3>
             <p class="bold">Flexboxes work on an axis grid system. It is a parent-child relationship. The parent is the flex container and the children are the flex items. The following terms relate to the dimensions, placement, and sizing for both the <span class="highlight">main axis</span> and the <span class="highlight">cross axis</span>:</p>
             <ul>
                 <li><span class="highlight">Main Start</span> - The starting edge of the <span class="highlight">main axis</span>.</li>
@@ -187,11 +341,11 @@
     <br>
     <!-- Flexbox Display Section Begins-->
     <section class="display">
-        <h2 class="header">Display</h2>
+        <h2 class="header" id="display">Display</h2>
         <p class="bold">When a selector is given a property of <span class="highlight">display: flex</span> or <span class="highlight">display: inline-flex</span>, the selector becomes a flex container. All elements nested within the flex container become flex items. The flex container is the parent of the flex items and largely controls how the flex items behave within the container.</p>
         <!-- Flexbox Display: Flex Begins -->
         <div class="wrapper">
-            <p class="title">Display: Flex</p>
+            <p class="title" id="display-flex">Display: Flex</p>
             <div class="container flex">
                 <div class="item">A</div>
                 <div class="item">B</div>
@@ -204,7 +358,7 @@
         <!-- Flexbox Display: Flex Ends -->
         <!-- Flexbox Display: Inline-Flex Begins -->
         <div class="wrapper">
-            <p class="title">Display: Inline-Flex</p>
+            <p class="title" id="display-inline-flex">Display: Inline-Flex</p>
             <div class="container inline-flex">
                 <div class="item">A</div>
                 <div class="item">B</div>
@@ -221,18 +375,18 @@
     <br>
     <!-- Flex Container Properties Section Begins-->
     <section class="container-properties">
-        <h2 class="header">Flex Container Properties</h2>
+        <h2 class="header" id="flex-container">Flex Container Properties</h2>
         <p class="bold">The following properties are set on the flex container. They are used to control the behavior of the flex items within the container.</p>
         <!-- Flex-Direction Master Section Begins-->
         <section class="multi-container">
-            <h3 class="subheader">Flex-Direction</h3>
+            <h3 class="subheader" id="flex-direction">Flex-Direction</h3>
             <p class="bold">The <span class="highlight">flex-direction</span> property sets the direction in which the <span class="highlight">main axis</span> is laid out. If it's associated with a row, the <span class="highlight">main axis</span> will be <span class="highlight">horizontal</span>. If it's associated with a column, the <span class="highlight">main axis</span> will be <span class="highlight">vertical</span>.</p>
             <!-- Wrapper for all Flex-Direction Begins -->
             <div class="wrapper multi-flex">
                 <div class="row-group">
                     <!-- Flex Direction: Row Begins-->
                     <div class="wrapper-items">
-                        <p class="title">Flex-Direction: Row</p>
+                        <p class="title" id="flex-direction-row">Flex-Direction: Row</p>
                         <div class="container flex width direction-row">
                             <div class="item">A</div>
                             <div class="item">B</div>
@@ -243,7 +397,7 @@
                     <!-- Flex Direction: Row Ends-->
                     <!-- Flex Direction: Row-Reverse Begins-->
                     <div class="wrapper-items">
-                        <p class="title">Flex-Direction: Row-Reverse</p>
+                        <p class="title" id="flex-direction-row-reverse">Flex-Direction: Row-Reverse</p>
                         <div class="container flex width direction-row-reverse">
                             <div class="item">A</div>
                             <div class="item">B</div>
@@ -256,7 +410,7 @@
                 <div class="column-group">
                     <!-- Flex Direction: Column Begins-->
                     <div class="wrapper-items-column">
-                        <p class="title">Flex-Direction: Column</p>
+                        <p class="title" id="flex-direction-column">Flex-Direction: Column</p>
                         <div class="container flex width container-column direction-column">
                             <div class="item column-item">A</div>
                             <div class="item column-item">B</div>
@@ -267,7 +421,7 @@
                     <!-- Flex Direction: Column Ends-->
                     <!-- Flex Direction: Column-Reverse Begins-->
                     <div class="wrapper-items-column">
-                        <p class="title">Flex-Direction: Column-Reverse</p>
+                        <p class="title" id="flex-direction-column-reverse">Flex-Direction: Column-Reverse</p>
                         <div class="container flex width container-column direction-column-reverse">
                             <div class="item column-item">A</div>
                             <div class="item column-item">B</div>
@@ -285,13 +439,13 @@
         <br>
         <!-- Flex-Wrap Master Section Begins-->
         <section class="multi-container">
-            <h3 class="subheader">Flex-Wrap</h3>
+            <h3 class="subheader" id="flex-wrap">Flex-Wrap</h3>
             <p class="bold">The <span class="highlight">flex-wrap</span> property allows flex items to wrap onto multiple flex lines (rows or columns of flex containers) instead of having flex items overflow the container or shrink too small and remain on one line.</p>
             <!-- Wrapper for all Flex-Wrap Begins -->
             <div class="wrapper multi-flex">
                 <!-- Flex Wrap: NoWrap Begins-->
                 <div class="wrapper-items">
-                    <p class="title">Flex-Wrap: NoWrap</p>
+                    <p class="title" id="flex-wrap-no-wrap">Flex-Wrap: NoWrap</p>
                     <div class="container flex width wrap-nowrap">
                         <div class="item">A</div>
                         <div class="item">B</div>
@@ -304,7 +458,7 @@
                 <!-- Flex Wrap: NoWrap Ends-->
                 <!-- Flex Wrap: Wrap Begins-->
                 <div class="wrapper-items">
-                    <p class="title">Flex-Wrap: Wrap</p>
+                    <p class="title" id="flex-wrap-wrap">Flex-Wrap: Wrap</p>
                     <div class="container flex width wrap-wrap">
                         <div class="item">A</div>
                         <div class="item">B</div>
@@ -317,7 +471,7 @@
                 <!-- Flex Wrap: Wrap Ends-->
                 <!-- Flex Wrap: Wrap-Reverse Begins-->
                 <div class="wrapper-items">
-                    <p class="title">Flex-Wrap: Wrap-Reverse</p>
+                    <p class="title" id="flex-wrap-wrap-reverse">Flex-Wrap: Wrap-Reverse</p>
                     <div class="container flex width wrap-wrap-reverse">
                         <div class="item">A</div>
                         <div class="item">B</div>
@@ -336,7 +490,7 @@
         <br>
         <!-- Flex-Flow Master Section Begins-->
         <section class="multi-container">
-            <h3 class="subheader">Flex-Flow</h3>
+            <h3 class="subheader" id="flex-flow">Flex-Flow</h3>
             <p class="bold">The <span class="highlight">flex-flow</span> property is shorthand for both <span class="highlight">flex-direction</span> and <span class="highlight">flex-wrap</span>. The values need to be added in that order. The following example is just one of many combinations.</p>
             <!-- Wrapper for all Flex-Flow Begins -->
             <div class="wrapper multi-flex">
@@ -474,13 +628,13 @@
     <br>
     <!-- Justify Content Master Section Begins-->
     <section class="multi-container">
-        <h3 class="subheader">Justify-Content</h3>
+        <h3 class="subheader" id="justify-content">Justify-Content</h3>
         <p class="bold">The <span class="highlight">justify-content</span> property aligns flex items along the <span class="highlight">main axis</span> of the flex container. It can also be used to distribute space between and around flex items along the <span class="highlight">main axis</span> of the flex container.</p>
         <!-- Wrapper for all Justify Content Begins -->
         <div class="wrapper multi-flex">
             <!-- Justify Content: Flex-Start Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Flex-Start</p>
+                <p class="title" id="justify-content-flex-start">Justify-Content: Flex-Start</p>
                 <div class="container flex width justify-content-flex-start">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -492,7 +646,7 @@
             <!-- Justify Content: Flex-Start Ends-->
             <!-- Justify Content: Flex-End Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Flex-End</p>
+                <p class="title" id="justify-content-flex-end">Justify-Content: Flex-End</p>
                 <div class="container flex width justify-content-flex-end">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -503,7 +657,7 @@
             </div>
             <!-- Justify Content: Center Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Center</p>
+                <p class="title" id="justify-content-center">Justify-Content: Center</p>
                 <div class="container flex width justify-content-center">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -515,7 +669,7 @@
             <!-- Justify Content: Center Ends-->
             <!-- Justify Content: Space Between Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Space-Between</p>
+                <p class="title" id="justify-content-space-between">Justify-Content: Space-Between</p>
                 <div class="container flex width justify-content-space-between">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -527,7 +681,7 @@
             <!-- Justify Content: Space Between Ends-->
             <!-- Justify Content: Space Around Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Space-Around</p>
+                <p class="title" id="justify-content-space-around">Justify-Content: Space-Around</p>
                 <div class="container flex width justify-content-space-around">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -539,7 +693,7 @@
             <!-- Justify Content: Space Around Ends-->
             <!-- Justify Content: Space Evenly Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Space-Evenly</p>
+                <p class="title" id="justify-content-space-evenly">Justify-Content: Space-Evenly</p>
                 <div class="container flex width justify-content-space-evenly">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -551,13 +705,13 @@
             <!-- Justify Content: Space Evenly Ends-->
             <!-- Justify Content: Inherit Begins -->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Inherit</p>
+                <p class="title" id="justify-content-inherit">Justify-Content: Inherit</p>
                 <p class="description"><span class="highlight">Justify-Content: Inherit</span> inherits the <span class="highlight">justify-content</span> value from the parent element.</p>
             </div>
             <!-- Justify Content: Inherit Ends -->
             <!-- Justify Content: Initial Begins -->
             <div class="wrapper-items container-width">
-                <p class="title">Justify-Content: Initial</p>
+                <p class="title" id="justify-content-initial">Justify-Content: Initial</p>
                 <p class="description"><span class="highlight">Justify-Content: Initial</span> sets the <span class="highlight">justify-content</span> value to the default value of the flex items properties.</p>
             </div>
             <!-- Justify Content: Initial Ends -->
@@ -569,13 +723,13 @@
     <br>
     <!-- Align-Items Master Section Begins-->
     <section class="multi-container">
-        <h3 class="subheader">Align-Items</h3>
+        <h3 class="subheader" id="align-items">Align-Items</h3>
         <p class="bold">The <span class="highlight">align-items</span> property aligns flex items along the <span class="highlight">cross axis</span> of the flex container. It can also be used to distribute space between and around flex items along the <span class="highlight">cross axis</span> of the flex container.</p>
         <!-- Wrapper for all Align-Items Begins -->
         <div class="wrapper multi-flex">
             <!-- Align-Items: Stretch Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Items: Stretch</p>
+                <p class="title" id="align-items-stretch">Align-Items: Stretch</p>
                 <div class="container flex width align-items-container align-items-stretch">
                     <div class="item">A</div>
                     <div class="item">B</div>
@@ -587,7 +741,7 @@
             <!-- Align-Items: Stretch Ends-->
             <!-- Align-Items: Flex-Start Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Items: Flex-Start</p>
+                <p class="title" id="align-items-flex-start">Align-Items: Flex-Start</p>
                 <div class="container flex width align-items-container align-items-flex-start">
                     <div class="item set-item">A</div>
                     <div class="item set-item">B</div>
@@ -599,7 +753,7 @@
             <!-- Align-Items: Flex-Start Ends-->
             <!-- Align-Items: Flex-End Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Items: Flex-End</p>
+                <p class="title" id="align-items-flex-end">Align-Items: Flex-End</p>
                 <div class="container flex width align-items-container align-items-flex-end">
                     <div class="item set-item">A</div>
                     <div class="item set-item">B</div>
@@ -611,7 +765,7 @@
             <!-- Align-Items: Flex-End Ends-->
             <!-- Align-Items: Center Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Items: Center</p>
+                <p class="title" id="align-items-center">Align-Items: Center</p>
                 <div class="container flex width align-items-container align-items-center">
                     <div class="item set-item">A</div>
                     <div class="item set-item">B</div>
@@ -625,7 +779,7 @@
             <div class="baseline-inherit-group">
                 <!-- Align-Items: Baseline Begins-->
                 <div class="wrapper-items container-width">
-                    <p class="title">Align-Items: Baseline</p>
+                    <p class="title" id="align-items-baseline">Align-Items: Baseline</p>
                     <div class="container flex width align-items-container align-items-baseline">
                         <div class="item set-item">A</div>
                         <div class="item set-item">B<br>B</div>
@@ -639,14 +793,14 @@
                 <div class="inherit-initial-group">
                     <!-- Align-Items: Inherit Begins -->
                     <div class="wrapper-items container-width definitions">
-                        <p class="title">Align-Items: Inherit</p>
+                        <p class="title" id="align-items-inherit">Align-Items: Inherit</p>
                         <p class="description"><span class="highlight">Align-Items: Inherit</span> inherits the <span class="highlight">align-items</span> value from the parent element.</p>
                     </div>
                     <!-- Align-Items: Inherit Ends -->
                     <br>
                     <!-- Align-Items: Initial Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Align-Items: Initial</p>
+                        <p class="title" id="align-items-initial">Align-Items: Initial</p>
                         <p class="description"><span class="highlight">Align-Items: Initial</span> sets the <span class="highlight">align-items</span> value to the default valueof the flex items properties.</p>
                     </div>
                     <!-- Align-Items: Initial Ends -->
@@ -662,13 +816,13 @@
     <br>
     <!-- Align-Content Master Section Begins-->
     <section class="multi-container">
-        <h3 class="subheader">Align-Content</h3>
+        <h3 class="subheader" id="align-content">Align-Content</h3>
         <p class="bold">The <span class="highlight">align-content</span> property aligns flex lines within the flex container along the <span class="highlight">cross axis</span> of the flex container. This property only works when <span class="highlight">flex-flow: wrap</span> or <span class="highlight">flex-flow: wrap-reverse</span> is set and there are 2 or more flex lines.</p>
         <!-- Wrapper for all Align-Content Begins -->
         <div class="wrapper multi-flex">
             <!-- Align-Content: Stretch Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Stretch</p>
+                <p class="title" id="align-content-stretch">Align-Content: Stretch</p>
                 <div class="container flex width align-content-container align-content-stretch">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -686,7 +840,7 @@
             <!-- Align-Content: Stretch Ends-->
             <!-- Align-Content: Flex-Start Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Flex-Start</p>
+                <p class="title" id="align-content-flex-start">Align-Content: Flex-Start</p>
                 <div class="container flex width align-content-container align-content-flex-start">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -704,7 +858,7 @@
             <!-- Align-Content: Flex-Start Ends-->
             <!-- Align-Content: Flex-End Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Flex-End</p>
+                <p class="title" id="align-content-flex-end">Align-Content: Flex-End</p>
                 <div class="container flex width align-content-container align-content-flex-end">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -722,7 +876,7 @@
             <!-- Align-Content: Flex-End Ends-->
             <!-- Align-Content: Center Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Center</p>
+                <p class="title" id="align-content-center">Align-Content: Center</p>
                 <div class="container flex width align-content-container align-content-center">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -740,7 +894,7 @@
             <!-- Align-Content: Center Ends-->
             <!-- Align-Content: Space-Between Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Space-Between</p>
+                <p class="title" id="align-content-space-between">Align-Content: Space-Between</p>
                 <div class="container flex width align-content-container align-content-space-between">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -758,7 +912,7 @@
             <!-- Align-Content: Space-Between Ends-->
             <!-- Align-Content: Space-Around Begins-->
             <div class="wrapper-items container-width">
-                <p class="title">Align-Content: Space-Around</p>
+                <p class="title" id="align-content-space-around">Align-Content: Space-Around</p>
                 <div class="container flex width align-content-container align-content-space-around">
                     <div class="item letters">A</div>
                     <div class="item letters">BB</div>
@@ -778,7 +932,7 @@
             <div class="baseline-inherit-group">
                 <!-- Align-Content: Space-Evenly Begins-->
                 <div class="wrapper-items container-width">
-                    <p class="title">Align-Content: Space-Evenly</p>
+                    <p class="title" id="align-content-space-evenly">Align-Content: Space-Evenly</p>
                     <div class="container flex width align-content-container align-content-space-evenly">
                         <div class="item letters">A</div>
                         <div class="item letters">BB</div>
@@ -798,14 +952,14 @@
                 <div class="inherit-initial-group">
                     <!-- Align-Content: Inherit Begins -->
                     <div class="wrapper-items container-width definitions">
-                        <p class="title">Align-Content: Inherit</p>
+                        <p class="title" id="align-content-inherit">Align-Content: Inherit</p>
                         <p class="description"><span class="highlight">Align-Content: Inherit</span> inherits the <span class="highlight">align-content</span> value from the parent element.</p>
                     </div>
                     <!-- Align-Content: Inherit Ends -->
                     <br>
                     <!-- Align-Content: Initial Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Align-Content: Initial</p>
+                        <p class="title" id="align-content-initial">Align-Content: Initial</p>
                         <p class="description"><span class="highlight">Align-Content: Initial</span> sets the <span class="highlight">align-content</span> value to the default value of the flex items properties.</p>
                     </div>
                     <!-- Align-Content: Initial Ends -->
@@ -821,19 +975,19 @@
 
     <!-- Gap Master Section Begins -->
     <section class="multi-container">
-        <h3 class="subheader">The Gap Properties</h3>
+        <h3 class="subheader" id="gap-properties">The Gap Properties</h3>
         <p class="bold">The <span class="highlight">gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
         <!-- Wrapper for all Gap Begins -->
         <div class="wrapper multi-flex">
             <!-- Gap Shorthand Begins -->
             <section class="multi-container gap-shorthand">
-                <h4 class="subheader-small">Gap Shorthand</h4>
+                <h4 class="subheader-small" id="gap-shorthand">Gap Shorthand</h4>
                 <p class="bold">The <span class="highlight">gap</span> property is a shorthand property for the <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties. It can have one value for both the column and row gap, or two values for the column and row gap. The values are numerical measurements.</p>
                 <!-- Wrapper for all Gap Shorthand Begins -->
                 <div class="wrapper multi-flex">
                     <!-- Gap Shorthand: One Value Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Gap: One Value</p>
+                        <p class="title" id="gap-one-value">Gap: One Value</p>
                         <p class="bold">When a single value is used for the <span class="highlight">gap</span> property, it will be applied to both the <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span>. This means it will add an equal space both <span class="highlight">vertically</span> and <span class="highlight">horizontally</span>.</p>
                         <div class="container flex width gap-container-1 gap-one-value">
                             <div class="item">A</div>
@@ -850,7 +1004,7 @@
                     <!-- Gap Shorthand: One Value Ends -->
                     <!-- Gap Shorthand: Two Values Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Gap: Two Values</p>
+                        <p class="title" id="gap-two-values">Gap: Two Values</p>
                         <p class="bold">When two values are used for the <span class="highlight">gap</span> property, the first value will be applied to the <span class="highlight">column-gap</span> and the second value will be applied to the <span class="highlight">row-gap</span>.</p>
                         <div class="container flex width gap-container-2 gap-two-values">
                             <div class="item">A</div>
@@ -871,13 +1025,13 @@
             <!-- Gap Shorthand Ends -->
             <!-- Column-Gap and Row-Gap Begins -->
             <section class="multi-container column-row-gap">
-                <h4 class="subheader-small">Column-Gap and Row-Gap</h4>
+                <h4 class="subheader-small" id="column-row-gap">Column-Gap and Row-Gap</h4>
                 <p class="bold">The <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
                 <!-- Wrapper for all Column-Gap and Row-Gap Begins -->
                 <div class="wrapper multi-flex">
                     <!-- Column-Gap Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Column-Gap</p>
+                        <p class="title" id="column-gap">Column-Gap</p>
                         <p class="bold">The <span class="highlight">column-gap</span> property adds consistent <span class="highlight">horizontal</span> spacing between flex items. This is the case no matter the value that is set for <span class="highlight">flex-direction</span>.</p>
                         <div class="container flex width column-gap-container">
                             <div class="item">A</div>
@@ -892,7 +1046,7 @@
                     <!-- Column-Gap Ends -->
                     <!-- Row-Gap Begins -->
                     <div class="wrapper-items container-width">
-                        <p class="title">Row-Gap</p>
+                        <p class="title" id="row-gap">Row-Gap</p>
                         <p class="bold">The <span class="highlight">row-gap</span> property adds consistent <span class="highlight">vertical</span> spacing between flex items. It is always apparent when <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, it is not apparent unless the items wrap to two or more flex lines.</p>
                         <div class="container flex width row-gap-container">
                             <div class="item">A</div>
@@ -918,19 +1072,19 @@
     <br>
     <!-- Flex Item Properties Section Begins-->
     <section class="item-properties">
-        <h2 class="header">Flex Item Properties</h2>
+        <h2 class="header" id="flex-item">Flex Item Properties</h2>
         <p class="bold">The following properties are set on individual flex items. They are used to control the behavior of the flex items within the container.</p>
         <!-- Wrapper for all Flex Item Properties Begins -->
         <div class="wrapper multi-flex">
             <!-- Flex, Flex-Grow, Flex-Shrink, and Flex-Basis Begins -->
             <section class="multi-container flex-properties">
-                <h3 class="subheader">The Flex Properties</h3>
+                <h3 class="subheader" id="flex-properties">The Flex Properties</h3>
                 <p class="bold">The <span class="highlight">flex</span> properties are used to control the sizing behavior of flex items. The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the dimensions of the flex container if the items are overflowing. The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. These can all be combined using the shorthand <span class="highlight">flex</span> property. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, the width of the items is affected. When <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set, the height of the items is affected. These properties will not override any max-width, min-width, max-height, or min-height properties if they have been set for the item. However, they will override any standard width or height properties if they have been set.</p>
                 <!-- Flex-Grow Begins -->
                 <article class="flex-grow-section">
-                    <h4 class="subheader-small">Flex-Grow</h4>
+                    <h4 class="subheader-small" id="flex-grow">Flex-Grow</h4>
                     <p class="bold">The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">default value</span> is 0 which means the flex items do not grow by default. If the value is set to 1, the flex item will grow to fill the available space of the flex container. If the value is set to 2, the flex item will grow to fill twice the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting grows.</p>
-                    <p class="title">Flex-Grow Formula</p>
+                    <p class="title" id="flex-grow-formula">Flex-Grow Formula</p>
                     <p class="bold">The size that the flex items will grow to fill the container can be determined by using all of the following calculations:</p>
                     <ul class="wider-list no-bullet formula-list">
                         <li class="bg1">Base Size = Sum of All Item Sizes </li>
@@ -942,7 +1096,7 @@
                         <li class="bg2">Final Size = Base Size + Additional Size </li>
                     </ul>
                     <br>
-                    <p class="title">Flex-Grow Examples</p><br>
+                    <p class="title" id="flex-grow-examples">Flex-Grow Examples</p><br>
                     <p class="title-small">Written Example</p>
                     <br>
 
@@ -1127,9 +1281,9 @@
                 <br>
                 <!-- Flex-Shrink Begins -->
                 <article class="flex-shrink-section">
-                    <h4 class="subheader-small">Flex-Shrink</h4>
+                    <h4 class="subheader-small" id="flex-shrink">Flex-Shrink</h4>
                     <p class="bold">The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the flex container if the items are overflowing. The <span class="highlight">default value</span> is 1 which means the flex items will shrink to fit the flex container if they are overflowing. If the value is set to 0, the flex item will not shrink. If the value is set to 2, the flex item will shrink twice the amount to fit the container, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting shrinks. Unlike the <span class="highlight">flex-grow</span> property, the <span class="highlight">flex-shrink</span> property requires a shrink percentage to be calculated when items are different sizes.</p>
-                    <p class="title">Flex-Shrink Formula</p>
+                    <p class="title" id="flex-shrink-formula">Flex-Shrink Formula</p>
                     <p class="bold">The size that the flex items will shrink to fit the container can be calculated in a similar way to the <span class="highlight">flex-grow</span> formula when all flex items are the same size. However, when the flex items are different sizes, the formula is slightly more complex as shown in the following calculations:</p>
                     <ul class="wider-list no-bullet formula-list">
                         <li class="bg1">Base Size = Sum of All Item Sizes </li>
@@ -1142,7 +1296,7 @@
                         <li class="bg1">Final Size = Item Size - Shrink Amount </li>
                     </ul>
                     <br>
-                    <p class="title">Flex-Shrink Examples</p><br>
+                    <p class="title" id="flex-shrink-examples">Flex-Shrink Examples</p><br>
                     <p class="title-small">Written Example</p>
                     <br>
 
@@ -1328,7 +1482,7 @@
                 <br>
                 <!-- Flex-Basis Begins -->
                 <article class="flex-basis-section">
-                    <h4 class="subheader-small">Flex-Basis</h4>
+                    <h4 class="subheader-small" id="flex-basis">Flex-Basis</h4>
                     <p class="bold">The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. The <span class="highlight">default value</span> is auto which means the initial size of the flex item is determined by the width (if the <span class="highlight">flex-direction</span> is row based) or height (if the <span class="highlight">flex-direction</span> is column based) set for the item. The value can be a length, a percentage, or an initial or inherit value. If a length or percentage is set for the <span class="highlight">flex-basis</span> property, it will override the width or height set for the item UNLESS it is min-width, max-width, min-height, or max-height. When a percentage is used as the value, it is relative to the width of the flex container.</p>
                     <p class="notation">The following information will be valid for this example:</p>
                     <ul>
@@ -1364,10 +1518,10 @@
 
                 <!-- Flex Shorthand Begins -->
                 <article class="flex-shorthand-section">
-                    <h4 class="subheader-small">Flex Shorthand</h4>
+                    <h4 class="subheader-small" id="flex-shorthand">Flex Shorthand</h4>
                     <p class="bold">The <span class="highlight">flex</span> property is a shorthand property for the <span class="highlight">flex-grow</span>, <span class="highlight">flex-shrink</span>, and <span class="highlight">flex-basis</span> properties. It always affects all three properties, and can be specified using one, two, or three values.</p>
                     <!-- Flex One Syntax Value Begins -->
-                    <p class="title">Flex: One Syntax Value</p>
+                    <p class="title" id="flex-one-syntax-value">Flex: One Syntax Value</p>
                     <p class="bold">When a single value is used for the <span class="highlight">flex</span> property, it must be one of the following:</p>
                     <ul class="wider-list">
                         <li><span class="highlight">Number:</span><br>
@@ -1388,7 +1542,7 @@
                     </ul>
                     <!-- Flex One Syntax Value Ends -->
                     <!-- Flex Two Syntax Value Begins -->
-                    <p class="title">Flex: Two Syntax Values</p>
+                    <p class="title" id="flex-two-syntax-values">Flex: Two Syntax Values</p>
                     <p class="bold">When two values are used for the <span class="highlight">flex</span> property, the first value must be a number to represent the <span class="highlight">flex-grow</span> value.<br> </p>
                     <p class="bold">The second value must be one of the following:</p>
                     <ul class="wider-list">
@@ -1398,7 +1552,7 @@
                     </ul>
                     <!-- Flex Two Syntax Value Ends -->
                     <!-- Flex Three Syntax Value Begins -->
-                    <p class="title">Flex: Three Syntax Values</p>
+                    <p class="title" id="flex-three-syntax-values">Flex: Three Syntax Values</p>
                     <p class="bold">When three values are used for the <span class="highlight">flex</span> property, the first value is the <span class="highlight">flex-grow</span> value, the second value is the <span class="highlight">flex-shrink</span> value, and the third value is the <span class="highlight">flex-basis</span> value.</p>
                     <!-- Flex Three Syntax Value Ends -->
                 </article>
@@ -1413,11 +1567,11 @@
         <br>
         <br>
         <!-- Align-Self Master Section Begins -->
-        <h3 class="subheader">Align-Self</h3>
+        <h3 class="subheader" id="align-self">Align-Self</h3>
         <p class="bold">The <span class="highlight">align-self</span> property allows the flex item to override the <span class="highlight">align-items</span> value that is set for the container. It can be used to align the item to the start, end, center, or baseline of the <span class="highlight">cross axis</span>.</p>
         <div class="wrapper multi-flex">
             <div class="wrapper-items container-width">
-                <p class="title">Align-Items Example</p>
+                <p class="title" id="align-items-example">Align-Items Example</p>
                 <div class="container flex width align-items-container align-items-flex-start justify-content-center">
                     <div class="item">A</div>
                     <div class="item align-self-end">B</div>
@@ -1431,11 +1585,11 @@
         <br>
         <br>
         <!-- Order Master Section Begins -->
-        <h3 class="subheader">Order</h3>
+        <h3 class="subheader" id="order">Order</h3>
         <p class="bold">The <span class="highlight">order</span> property allows the flex item to override the order of the flex items in the container. By <span class="highlight">default</span>, the order of the flex items is set to 0 which means that the HTML elements are listed in the same order that they are listed in the HTML document. If a reverse direction is set for the <span class="highlight">flex-direction</span> property, the order of the flex items will be listed in the reverse order that they are listed in the HTML document. To completely customize the order of the flex items, the <span class="highlight">order</span> property can be used.</p>
         <div class="wrapper multi-flex">
             <div class="wrapper-items container-width">
-                <p class="title">Order Example</p>
+                <p class="title" id="order-example">Order Example</p>
                 <div class="container flex width align-items-container align-items-center">
                     <div class="item order3">A</div>
                     <div class="item order1">B</div>

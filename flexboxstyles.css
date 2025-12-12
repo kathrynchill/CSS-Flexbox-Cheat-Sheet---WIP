@@ -137,7 +137,8 @@ li .highlight {
     font-weight: bold;
 }
 
-ul {
+/* Exclude navbar ul elements from these styles */
+ul:not(.topnav-links):not(.submenu):not(.subsubmenu) {
     list-style-type: none;
     padding: 0;
     margin: 0px auto 10px;
@@ -148,21 +149,25 @@ ul {
     max-width: 700px;
 }
 
-ul.wider-list {
+/* Exclude navbar ul elements from these styles */
+ul.wider-list:not(.topnav-links):not(.submenu):not(.subsubmenu) {
     max-width: 1000px;
     width: 100%;
 }
 
-ul.wider-list2 {
+/* Exclude navbar ul elements from these styles */
+ul.wider-list2:not(.topnav-links):not(.submenu):not(.subsubmenu) {
     max-width: 800px;
     width: 100%;
 }
 
-ul.list-indent {
+/* Exclude navbar ul elements from these styles */
+ul.list-indent:not(.topnav-links):not(.submenu):not(.subsubmenu) {
     padding-left: 20px;
 }
 
-li {
+/* Exclude navbar li elements - these will be styled in flexboxstylesnav.css */
+li:not(.topnav-item):not(.masterlink):not(.sublink) {
     font-size: 12px;
     font-weight: bold;
     text-align: left;
@@ -173,7 +178,8 @@ li {
     margin-bottom: 5px;
 }
 
-li.smaller-list-text {
+/* Exclude navbar li elements from these styles */
+li.smaller-list-text:not(.topnav-item):not(.masterlink):not(.sublink) {
     font-size: 10px;
 }
 
@@ -189,12 +195,13 @@ ul.no-bullet li::before {
     content: none;
 }
 
-ul.formula-list {
+/* Exclude navbar ul elements from these styles */
+ul.formula-list:not(.topnav-links):not(.submenu):not(.subsubmenu) {
     align-items: center;
     margin: 0 auto;
 }
 
-ul.formula-list li {
+ul.formula-list li:not(.topnav-item):not(.masterlink):not(.sublink) {
     margin-bottom: 0;
     padding-left: 0px;
 }

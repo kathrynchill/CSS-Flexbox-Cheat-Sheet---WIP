@@ -1,0 +1,463 @@
+/* =========================
+   NAVBAR RESET - Override main CSS ul/li styles
+   Keep only the custom bullet (♥) from main CSS
+   ========================= */
+
+/* Reset all ul styles from flexboxstyles.css */
+/* Note: .topnav-links is excluded - it needs to stay flex for horizontal layout */
+.topnav ul:not(.topnav-links),
+.submenu,
+.subsubmenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Override flex from main CSS */
+    flex-direction: initial;
+    align-items: initial;
+    width: auto;
+    max-width: none;
+}
+
+/* Reset all li styles from flexboxstyles.css - must be specific to override */
+/* Note: position: relative is kept for the custom bullet (♥) to work */
+/* Note: .topnav-item needs to stay as flex item for horizontal layout */
+/* Note: padding-left will be set for menu items with bullets below */
+.topnav li:not(.topnav-item),
+.masterlink,
+.sublink,
+.submenu li,
+.subsubmenu li,
+.submenu > li,
+.subsubmenu > li {
+    font-size: inherit;
+    font-weight: bold; /* Make all navbar text bold */
+    text-align: left;
+    display: list-item; /* Override block from main CSS */
+    padding-left: 0; /* Will be overridden for items with bullets */
+    position: relative; /* Keep relative for bullet positioning */
+    line-height: inherit;
+    margin-bottom: 0; /* Override 5px from main CSS */
+}
+
+/* .topnav-item needs special handling - it's a flex item in .topnav-links */
+.topnav-item {
+    font-size: inherit;
+    font-weight: bold; /* Make bold */
+    text-align: left;
+    display: flex; /* Keep as flex item for horizontal layout */
+    padding-left: 0;
+    position: relative;
+    line-height: inherit;
+    margin-bottom: 0;
+    list-style: none; /* Remove list bullet */
+}
+
+/* =========================
+   CUSTOM BULLET POINTS FOR NAVBAR
+   Override main CSS bullets with navbar-specific styles
+   ========================= */
+
+/* =========================
+   CUSTOM BULLET POINTS FOR NAVBAR
+   ========================= */
+
+/* Master links: bullet indented slightly from left edge, text with gap */
+.masterlink::before {
+    content: "♥";
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    left: 3px !important; /* Small indent from left edge */
+    color: #ff4da6 !important;
+    line-height: 1;
+}
+
+/* Sublinks: indented from master, bullet at 0 relative to li (li itself is indented) */
+.sublink::before {
+    content: "♥";
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    left: 0 !important; /* At li's left edge, li margin makes it indented */
+    color: #ff61b0 !important;
+    line-height: 1;
+}
+
+/* Subsubmenu: indented from sublink, bullet at 0 relative to li (ul already has 12px padding) */
+.subsubmenu li::before {
+    content: "♥";
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    left: 0 !important; /* At li's left edge, ul padding makes it indented */
+    color: #ff7abd !important;
+    line-height: 1;
+}
+
+/* =========================
+   TOP NAV BAR
+   ========================= */
+   .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000;
+    width: 100%;
+   }
+   
+   .topnav{
+    width: 100%;
+    background: #ff61b0;
+    color: #ffffff;
+    border-bottom: 1px solid #8a0045;
+    font-size: 10px;
+  }
+  
+  .topnav-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 12px; /* thin bar */
+  }
+  
+  .topnav-title{
+    white-space: nowrap;
+    font-size: 10px;
+    font-weight: bold; /* Make bold */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use parent color */
+    cursor: pointer; /* Show it's clickable */
+  }
+  
+  /* Ensure topnav-title link looks like regular text */
+  .topnav-title:hover,
+  .topnav-title:visited,
+  .topnav-title:active,
+  .topnav-title:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .topnav-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Keep all items on one line */
+  }
+  
+  /* Ensure topnav-item elements are flex items in a row */
+  .topnav-links > .topnav-item {
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  
+  /* =========================
+     SUMMARY (MAIN TOGGLES)
+     ========================= */
+  .nav-group{
+    position: relative;
+  }
+  
+  .topnav-summary{
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 10px;
+    color: #ffffff;
+    list-style: none;
+    font-weight: bold !important; /* Make bold */
+    padding-left: 0 !important; /* No padding, no bullet */
+  }
+  
+  /* Ensure topnav summary has no bullet */
+  .topnav-summary::before {
+    content: none !important;
+  }
+  
+  /* Ensure topnav items have no bullet */
+  .topnav-item::before {
+    content: none !important;
+  }
+  
+  .topnav-summary::-webkit-details-marker{
+    display: none;
+  }
+  
+  /* =========================
+     LINKS (GLOBAL)
+     ========================= */
+  .topnav a{
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  /* =========================
+     SUBMENU PANEL
+     ========================= */
+  .submenu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 240px;
+  
+    margin-top: 6px;
+    padding: 11px 20px; /* Added 3px extra padding (was 8px 10px) */
+  
+    /* 85% opaque white using extended hex */
+    background: #FFFFFF;
+  
+    line-height: 1.1;
+  }
+  
+  /* =========================
+     SUBMENU BACK LINK
+     ========================= */
+  
+  .submenu-back {
+    padding-left: 0 !important;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenu-back::before {
+    content: none !important; /* No bullet point */
+  }
+  
+  .submenu-back > a {
+    font-size: 10px !important;
+    color: #000000 !important; /* Black font */
+    background: #FF99CC !important; /* Background color */
+    padding: 6px 10px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+  
+  .submenu-back > a:hover,
+  .submenu-back > a:visited,
+  .submenu-back > a:active,
+  .submenu-back > a:focus {
+    color: #000000 !important;
+    text-decoration: none;
+    background: #FF99CC !important;
+  }
+  
+  /* =========================
+     INDENTATION + TYPOGRAPHY
+     ========================= */
+  
+  /* Master link: bullet at 3px, text at 19px (3px indent + 12px bullet + 4px gap) */
+  .submenu .masterlink,
+  .masterlink {
+    padding-left: 19px !important; /* 3px indent + 12px bullet + 4px gap */
+  }
+  
+  .masterlink > a{
+    font-size: 10px;
+    color: #ff4da6;
+    font-weight: bold !important;
+  }
+  
+  /* Sublinks: indented 10px from master, bullet at 0 relative to li, text at 16px (12px + 4px) */
+  .submenu .sublink,
+  .sublink {
+    padding-left: 16px !important; /* 12px bullet + 4px gap */
+    margin-left: 10px !important; /* Indent the entire sublink 10px from master */
+  }
+  
+  .sublink > a{
+    font-size: 9px;
+    color: #ff61b0;
+    font-weight: bold !important;
+  }
+  
+  /* Subsubmenu: indented from sublink */
+  .subsubmenu{
+    margin-top: 4px;
+    padding-left: 12px !important; /* Indent 12px from sublink */
+  }
+  
+  /* Subsubmenu li: bullet at 0 relative to li, text at 16px (12px bullet + 4px gap) */
+  .subsubmenu > li,
+  .subsubmenu li {
+    padding-left: 16px !important; /* 12px bullet + 4px gap (ul already has 12px padding) */
+    margin-left: 0 !important;
+  }
+  
+  .subsubmenu a{
+    font-size: 8px;
+    color: #ff7abd;
+    font-weight: bold !important;
+  }
+  
+  /* keep nav from wrapping */
+  .topnav-title,
+  .topnav-links{
+    flex: 0 0 auto;
+  }
+  
+  /* =========================
+     MOBILE MENU TOGGLE (CSS ONLY)
+     ========================= */
+  .mobile-menu-checkbox {
+    display: none; /* Hide the checkbox */
+  }
+  
+  .mobile-menu-label {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .mobile-menu-label .heart-icon {
+    display: block;
+  }
+  
+  .mobile-menu-label:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+  
+  /* =========================
+     RESPONSIVE MOBILE MENU (CSS ONLY)
+     ========================= */
+  @media (max-width: 768px) {
+    /* Show mobile toggle button */
+    .mobile-menu-label {
+      display: block !important;
+    }
+    
+    /* Hide normal menu on mobile by default */
+    .topnav-links {
+      display: none !important;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ff61b0;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      margin: 0;
+      z-index: 1001;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-height: calc(100vh - 100%);
+      overflow-y: auto;
+    }
+    
+    /* Show menu when checkbox is checked */
+    .mobile-menu-checkbox:checked ~ .topnav-links {
+      display: flex !important;
+    }
+    
+    /* Style topnav items for mobile */
+    .topnav-item {
+      display: block !important;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Style summary for mobile */
+    .topnav-summary {
+      display: block;
+      padding: 12px 16px;
+      width: 100%;
+      text-align: left;
+      font-size: 12px;
+    }
+    
+    /* Hide details marker on mobile */
+    .topnav-summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    /* Style nav-group for mobile */
+    .nav-group {
+      position: static;
+    }
+    
+    /* Style submenu for mobile - appears as overlay from left */
+    .submenu {
+      position: fixed !important;
+      left: 0 !important;
+      right: auto !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      width: 280px;
+      max-width: 85vw;
+      min-width: auto;
+      margin: 0;
+      padding: 20px 16px;
+      background: #FFFFFF;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      z-index: 1002;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    /* Show submenu when parent details is open (CSS only - no JS needed!) */
+    .nav-group[open] .submenu {
+      transform: translateX(0);
+    }
+    
+    /* Add overlay behind submenu */
+    .nav-group[open]::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      pointer-events: auto;
+    }
+    
+    /* Style subsubmenu for mobile - nested within submenu */
+    .subsubmenu {
+      position: relative !important;
+      left: auto !important;
+      margin-top: 8px;
+      padding-left: 20px !important;
+      background: transparent;
+    }
+    
+    /* Adjust topnav-inner for mobile */
+    .topnav-inner {
+      position: relative;
+    }
+    
+    /* Ensure masterlinks and sublinks work in mobile submenu with proper indentation */
+    /* Masterlink: bullet at 3px, text at 19px (matches desktop) */
+    .submenu .masterlink {
+      margin-left: 0 !important;
+      padding-left: 19px !important; /* 3px indent + 12px bullet + 4px gap */
+    }
+    
+    .submenu .masterlink::before {
+      left: 3px !important; /* Small indent from left edge */
+    }
+    
+    /* Sublink: indented 10px from master, bullet at 0 relative to li, text at 16px (matches desktop) */
+    .submenu .sublink {
+      margin-left: 10px !important; /* Indent the entire sublink 10px from master */
+      padding-left: 16px !important; /* 12px bullet + 4px gap */
+    }
+    
+    .submenu .sublink::before {
+      left: 0 !important; /* At li's left edge, li margin makes it indented */
+    }
+  }
+  
