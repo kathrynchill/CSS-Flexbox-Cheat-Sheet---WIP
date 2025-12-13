@@ -27,6 +27,18 @@
             </label>
       
             <ul class="topnav-links">
+              <!-- Intro -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Intro</summary>
+                  <a class="topnav-summary-link" href="#menu-intro">Intro</a>
+                  <ul class="submenu jsless-submenu" id="menu-intro">
+                    <li class="submenu-close"><a href="#nav-close">× CLOSE</a></li>
+                    <li class="masterlink"><a href="#flex-intro">Intro</a></li>
+                  </ul>
+                </details>
+              </li>
+      
               <!-- Flexbox Axes -->
               <li class="topnav-item">
                 <details class="nav-group">
@@ -162,6 +174,20 @@
                   </ul>
                 </details>
               </li>
+      
+              <!-- Flexbox Summary -->
+              <li class="topnav-item">
+                <details class="nav-group">
+                  <summary class="topnav-summary">Flex Summary</summary>
+                  <a class="topnav-summary-link" href="#menu-summary">Flex Summary</a>
+                  <ul class="submenu jsless-submenu" id="menu-summary">
+                    <li class="submenu-close"><a href="#nav-close">× CLOSE</a></li>
+                    <li class="masterlink"><a href="#flex-summary">Flex Summary</a></li>
+                    <li class="sublink"><a href="#flex-mental-model">The Flexbox Mental Model</a></li>
+                    <li class="sublink"><a href="#flex-default-behavior">Default Flex Behavior</a></li>
+                  </ul>
+                </details>
+              </li>
             </ul>
           </div>
         </nav>
@@ -173,20 +199,50 @@
     
     <h1 id="flexbox-cheat-sheet">Flexbox Cheat Sheet</h1>
 
+    <!-- What is Flexbox? Section Begins-->
+    <section>
+        <h2 class="header" id="flex-intro">Intro</h2>
+        <p class="bold">A <span class="highlight">flexbox</span> is a one-dimensional layout model that helps you lay out <span class="highlight">items</span> in a <span class="highlight">row</span> or <span class="highlight">column</span> with fine-tuned control over spacing, alignment, and <span class="highlight">item</span> sizing.</p>
+        <div class="multi-flex">
+            <div>
+                <p class="title">Common Uses:</p>
+                <ul>
+                    <li>Navigation Bars</li>
+                    <li>Button Groups</li>
+                    <li>Toolbars</li>
+                    <li>Card Rows</li>
+                    <li>Media Objects (Image + Text)</li>
+                    <li>Centering Things</li>
+                    <li>Small UI Components Inside a Larger Layout</li>
+                </ul>
+            </div>
+            <div>
+                <p class="title">Flexbox Excels At:</p>
+                <ul>
+                    <li>Content Driven Sizing</li>
+                    <li>Distributing Leftover Space</li>
+                    <li>Aligning Items Relative to Each Other</li>
+                    <li>Handling Unknown or Dynamic Item Sizes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- What is Flexbox? Section Ends-->
+
     <!-- Flexbox Axes Section Begins-->
     <section class="axes">
         <h2 class="header" id="flexbox-axes">Flexbox Axes</h2>
         <!-- Main and Cross Axis Begins-->
         <div class="wrapper">
             <h3 class="subheader" id="main-cross-axis">Main Axis & Cross Axis</h3>
-            <p class="bold">The <span class="highlight">main axis</span> is the axis along which flex items are laid out. It is defined by the <span class="highlight">flex-direction</span> property.</p>
-            <p class="bold">The <span class="highlight">cross axis</span> is perpendicular to the <span class="highlight">main axis</span>. It determines the direction in which flex lines will be added when wrapping is set via the <span class="highlight">flex-flow</span> property.</p>
+            <p class="bold">The <span class="highlight">main axis</span> is the axis along which <span class="highlight">flex items</span> are laid out. It is defined by the <span class="highlight">flex-direction</span> property.</p>
+            <p class="bold">The <span class="highlight">cross axis</span> is perpendicular to the <span class="highlight">main axis</span>. It determines the direction in which <span class="highlight">flex lines</span> will be added when wrapping is set via the <span class="highlight">flex-flow</span> property.</p>
         </div>
         <!-- Main and Cross Axis Ends-->
         <!-- Main and Cross Terms Begins-->
         <div class="wrapper images">
             <h3 class="subheader" id="main-cross-terms">Main & Cross Terms</h3>
-            <p class="bold">Flexboxes work on an axis grid system. It is a parent-child relationship. The parent is the flex container and the children are the flex items. The following terms relate to the dimensions, placement, and sizing for both the <span class="highlight">main axis</span> and the <span class="highlight">cross axis</span>:</p>
+            <p class="bold"><span class="highlight">Flexboxes</span> work on an axis grid system. It is a parent-child relationship. The parent is the <span class="highlight">flex container</span> and the children are the <span class="highlight">flex items</span>. The following terms relate to the dimensions, placement, and sizing for both the <span class="highlight">main axis</span> and the <span class="highlight">cross axis</span>:</p>
             <ul>
                 <li><span class="highlight">Main Start</span> - The starting edge of the <span class="highlight">main axis</span>.</li>
                 <li><span class="highlight">Main End</span> - The ending edge of the <span class="highlight">main axis</span>.</li>
@@ -347,7 +403,7 @@
     <!-- Flexbox Display Section Begins-->
     <section class="display">
         <h2 class="header" id="display">Display</h2>
-        <p class="bold">When a selector is given a property of <span class="highlight">display: flex</span> or <span class="highlight">display: inline-flex</span>, the selector becomes a flex container. All elements nested within the flex container become flex items. The flex container is the parent of the flex items and largely controls how the flex items behave within the container.</p>
+        <p class="bold">When a selector is given a property of <span class="highlight">display: flex</span> or <span class="highlight">display: inline-flex</span>, the selector becomes a <span class="highlight">flex container</span>. All elements nested within the <span class="highlight">flex container</span> become <span class="highlight">flex items</span>. The <span class="highlight">flex container</span> is the parent of the <span class="highlight">flex items</span> and largely controls how the <span class="highlight">flex items</span> behave within the <span class="highlight">container</span>.</p>
         <!-- Flexbox Display: Flex Begins -->
         <div class="wrapper">
             <p class="title" id="display-flex">Display: Flex</p>
@@ -358,7 +414,7 @@
                 <div class="item">D</div>
                 <div class="item">E</div>
             </div>
-            <p class="description"><span class="highlight">Display: Flex</span> causes flex containers to act as a block element. The container will maintain the set or <span class="highlight">default</span> dimensions.</p>
+            <p class="description"><span class="highlight">Display: Flex</span> causes <span class="highlight">flex containers</span> to act as a block element. The <span class="highlight">container</span> will maintain the set or <span class="highlight">default</span> dimensions.</p>
         </div>
         <!-- Flexbox Display: Flex Ends -->
         <!-- Flexbox Display: Inline-Flex Begins -->
@@ -371,7 +427,7 @@
                 <div class="item">D</div>
                 <div class="item">E</div>
             </div>
-            <p class="description"><span class="highlight">Display: Inline-Flex</span> causes flex containers to act as an inline-block element. If no dimensions are set for the container, it will only stretch to the size of its children.</p>
+            <p class="description"><span class="highlight">Display: Inline-Flex</span> causes <span class="highlight">flex containers</span> to act as an inline-block element. If no dimensions are set for the <span class="highlight">container</span>, it will only stretch to the size of its children.</p>
         </div>
         <!-- Flexbox Display: Inline-Flex Ends -->
     </section>
@@ -381,11 +437,11 @@
     <!-- Flex Container Properties Section Begins-->
     <section class="container-properties">
         <h2 class="header" id="flex-container">Flex Container Properties</h2>
-        <p class="bold">The following properties are set on the flex container. They are used to control the behavior of the flex items within the container.</p>
+        <p class="bold">The following properties are set on the <span class="highlight">flex container</span>. They are used to control the behavior of the <span class="highlight">flex items</span> within the <span class="highlight">container</span>.</p>
         <!-- Flex-Direction Master Section Begins-->
         <section class="multi-container">
             <h3 class="subheader" id="flex-direction">Flex-Direction</h3>
-            <p class="bold">The <span class="highlight">flex-direction</span> property sets the direction in which the <span class="highlight">main axis</span> is laid out. If it's associated with a row, the <span class="highlight">main axis</span> will be <span class="highlight">horizontal</span>. If it's associated with a column, the <span class="highlight">main axis</span> will be <span class="highlight">vertical</span>.</p>
+            <p class="bold">The <span class="highlight">flex-direction</span> property sets the direction in which the <span class="highlight">main axis</span> is laid out. If it's associated with a <span class="highlight">row</span>, the <span class="highlight">main axis</span> will be <span class="highlight">horizontal</span>. If it's associated with a <span class="highlight">column</span>, the <span class="highlight">main axis</span> will be <span class="highlight">vertical</span>.</p>
             <!-- Wrapper for all Flex-Direction Begins -->
             <div class="wrapper multi-flex">
                 <div class="row-group">
@@ -397,7 +453,7 @@
                             <div class="item">B</div>
                             <div class="item">C</div>
                         </div>
-                        <p class="description"><span class="highlight">Flex-Direction: Row</span> is the <span class="highlight">default setting</span>. It places flex items in an inline <span class="highlight">horizontal</span> row on the <span class="highlight">main axis</span>.</p>
+                        <p class="description"><span class="highlight">Flex-Direction: Row</span> is the <span class="highlight">default setting</span>. It places <span class="highlight">flex items</span> in an inline <span class="highlight">horizontal</span> <span class="highlight">row</span> on the <span class="highlight">main axis</span>.</p>
                     </div>
                     <!-- Flex Direction: Row Ends-->
                     <!-- Flex Direction: Row-Reverse Begins-->
@@ -408,7 +464,7 @@
                             <div class="item">B</div>
                             <div class="item">C</div>
                         </div>
-                        <p class="description"><span class="highlight">Flex-Direction: Row-Reverse</span> places flex items in reverse order in an inline <span class="highlight">horizontal</span> row on the <span class="highlight">main axis</span>.</p>
+                        <p class="description"><span class="highlight">Flex-Direction: Row-Reverse</span> places <span class="highlight">flex items</span> in reverse order in an inline <span class="highlight">horizontal</span> <span class="highlight">row</span> on the <span class="highlight">main axis</span>.</p>
                     </div>
                     <!-- Flex Direction: Row-Reverse Ends-->
                 </div>
@@ -421,7 +477,7 @@
                             <div class="item column-item">B</div>
                             <div class="item column-item">C</div>
                         </div>
-                        <p class="description"><span class="highlight">Flex-Direction: Column</span> places flex items <span class="highlight">vertically</span> along the <span class="highlight">main axis</span>.</p>
+                        <p class="description"><span class="highlight">Flex-Direction: Column</span> places <span class="highlight">flex items</span> <span class="highlight">vertically</span> along the <span class="highlight">main axis</span>.</p>
                     </div>
                     <!-- Flex Direction: Column Ends-->
                     <!-- Flex Direction: Column-Reverse Begins-->
@@ -432,7 +488,7 @@
                             <div class="item column-item">B</div>
                             <div class="item column-item">C</div>
                         </div>
-                        <p class="description"><span class="highlight">Flex-Direction: Column-Reverse</span> places flex items in reverse order <span class="highlight">vertically</span> along the <span class="highlight">main axis</span>.</p>
+                        <p class="description"><span class="highlight">Flex-Direction: Column-Reverse</span> places <span class="highlight">flex items</span> in reverse order <span class="highlight">vertically</span> along the <span class="highlight">main axis</span>.</p>
                     </div>
                     <!-- Flex Direction: Column-Reverse Ends-->
                 </div>
@@ -445,7 +501,7 @@
         <!-- Flex-Wrap Master Section Begins-->
         <section class="multi-container">
             <h3 class="subheader" id="flex-wrap">Flex-Wrap</h3>
-            <p class="bold">The <span class="highlight">flex-wrap</span> property allows flex items to wrap onto multiple flex lines (rows or columns of flex containers) instead of having flex items overflow the container or shrink too small and remain on one line.</p>
+            <p class="bold">The <span class="highlight">flex-wrap</span> property allows <span class="highlight">flex items</span> to wrap onto multiple <span class="highlight">flex lines</span> (<span class="highlight">rows</span> or <span class="highlight">columns</span> of <span class="highlight">flex containers</span>) instead of having <span class="highlight">flex items</span> overflow the <span class="highlight">container</span> or shrink too small and remain on one line.</p>
             <!-- Wrapper for all Flex-Wrap Begins -->
             <div class="wrapper multi-flex">
                 <!-- Flex Wrap: NoWrap Begins-->
@@ -458,7 +514,7 @@
                         <div class="item">D</div>
                         <div class="item">E</div>
                     </div>
-                <p class="description"><span class="highlight">Flex-Wrap: NoWrap</span> is the <span class="highlight">default setting</span>. If the size of the flex items is greater than the size of the container, they will either overflow the container or shrink to fit depending on the property settings for the items.</p>
+                <p class="description"><span class="highlight">Flex-Wrap: NoWrap</span> is the <span class="highlight">default setting</span>. If the size of the <span class="highlight">flex items</span> is greater than the size of the <span class="highlight">container</span>, they will either overflow the <span class="highlight">container</span> or shrink to fit depending on the property settings for the <span class="highlight">items</span>.</p>
                 </div>
                 <!-- Flex Wrap: NoWrap Ends-->
                 <!-- Flex Wrap: Wrap Begins-->
@@ -471,7 +527,7 @@
                         <div class="item">D</div>
                         <div class="item">E</div>
                     </div>
-                    <p class="description"><span class="highlight">Flex-Wrap: Wrap</span> allows flex items to wrap onto multiple lines, preventing overflow and maintaining item size.</p>
+                    <p class="description"><span class="highlight">Flex-Wrap: Wrap</span> allows <span class="highlight">flex items</span> to wrap onto multiple lines, preventing overflow and maintaining <span class="highlight">item</span> size.</p>
                 </div>
                 <!-- Flex Wrap: Wrap Ends-->
                 <!-- Flex Wrap: Wrap-Reverse Begins-->
@@ -484,7 +540,7 @@
                         <div class="item">D</div>
                         <div class="item">E</div>
                     </div>
-                    <p class="description"><span class="highlight">Flex-Wrap: Wrap-Reverse</span> allows flex items to wrap onto multiple lines in reverse order, preventing overflow and maintaining item size.</p>
+                    <p class="description"><span class="highlight">Flex-Wrap: Wrap-Reverse</span> allows <span class="highlight">flex items</span> to wrap onto multiple lines in reverse order, preventing overflow and maintaining <span class="highlight">item</span> size.</p>
                 </div>
                 <!-- Flex Wrap: Wrap-Reverse Ends-->
             </div>
@@ -634,7 +690,7 @@
     <!-- Justify Content Master Section Begins-->
     <section class="multi-container">
         <h3 class="subheader" id="justify-content">Justify-Content</h3>
-        <p class="bold">The <span class="highlight">justify-content</span> property aligns flex items along the <span class="highlight">main axis</span> of the flex container. It can also be used to distribute space between and around flex items along the <span class="highlight">main axis</span> of the flex container.</p>
+        <p class="bold">The <span class="highlight">justify-content</span> property aligns <span class="highlight">flex items</span> along the <span class="highlight">main axis</span> of the <span class="highlight">flex container</span>. It can also be used to distribute space between and around <span class="highlight">flex items</span> along the <span class="highlight">main axis</span> of the <span class="highlight">flex container</span>. Great for nav links, button groups, or toolbars.</p>
         <!-- Wrapper for all Justify Content Begins -->
         <div class="wrapper multi-flex">
             <!-- Justify Content: Flex-Start Begins-->
@@ -645,8 +701,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Flex-Start</span> aligns flex items to the start of the <span class="highlight">main axis</span>. This is the <span class="highlight">default setting</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Flex-Start</span> aligns <span class="highlight">flex items</span> to the start of the <span class="highlight">main axis</span>. This is the <span class="highlight">default setting</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Flex-Start Ends-->
             <!-- Justify Content: Flex-End Begins-->
@@ -657,8 +713,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Flex-End</span> aligns flex items to the end of the <span class="highlight">main axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Flex-End</span> aligns <span class="highlight">flex items</span> to the end of the <span class="highlight">main axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Center Begins-->
             <div class="wrapper-items container-width">
@@ -668,8 +724,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Center</span> aligns flex items to the center of the <span class="highlight">main axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Center</span> aligns <span class="highlight">flex items</span> to the center of the <span class="highlight">main axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Center Ends-->
             <!-- Justify Content: Space Between Begins-->
@@ -680,8 +736,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Space-Between</span> distributes space between flex items along the <span class="highlight">main axis</span>. It does not add space between the main start and the first flex item, or between the main end and the last flex item.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Space-Between</span> distributes space between <span class="highlight">flex items</span> along the <span class="highlight">main axis</span>. It does not add space between the main start and the first <span class="highlight">flex item</span>, or between the main end and the last <span class="highlight">flex item</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Space Between Ends-->
             <!-- Justify Content: Space Around Begins-->
@@ -692,8 +748,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Space-Around</span> distributes space around flex items along the <span class="highlight">main axis</span>. It adds space before the first flex item and after the last flex item, and equal space between each flex item. The space added before the first flex item and after the last flex item is typically half the size of the space between each flex item.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Space-Around</span> distributes space around <span class="highlight">flex items</span> along the <span class="highlight">main axis</span>. It adds space before the first <span class="highlight">flex item</span> and after the last <span class="highlight">flex item</span>, and equal space between each <span class="highlight">flex item</span>. The space added before the first <span class="highlight">flex item</span> and after the last <span class="highlight">flex item</span> is typically half the size of the space between each <span class="highlight">flex item</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Space Around Ends-->
             <!-- Justify Content: Space Evenly Begins-->
@@ -704,8 +760,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Justify-Content: Space-Evenly</span> distributes space evenly between flex items along the <span class="highlight">main axis</span>. It adds space before the first flex item and after the last flex item, and equal space between each flex item. The space added before the first flex item and after the last flex item is equal to the space between each flex item.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">vertical</span>.</p>
+                <p class="description"><span class="highlight">Justify-Content: Space-Evenly</span> distributes space evenly between <span class="highlight">flex items</span> along the <span class="highlight">main axis</span>. It adds space before the first <span class="highlight">flex item</span> and after the last <span class="highlight">flex item</span>, and equal space between each <span class="highlight">flex item</span>. The space added before the first <span class="highlight">flex item</span> and after the last <span class="highlight">flex item</span> is equal to the space between each <span class="highlight">flex item</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">horizontal</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">vertical</span>.</p>
             </div>
             <!-- Justify Content: Space Evenly Ends-->
             <!-- Justify Content: Inherit Begins -->
@@ -717,7 +773,7 @@
             <!-- Justify Content: Initial Begins -->
             <div class="wrapper-items container-width">
                 <p class="title" id="justify-content-initial">Justify-Content: Initial</p>
-                <p class="description"><span class="highlight">Justify-Content: Initial</span> sets the <span class="highlight">justify-content</span> value to the default value of the flex items properties.</p>
+                <p class="description"><span class="highlight">Justify-Content: Initial</span> sets the <span class="highlight">justify-content</span> value to the default value of the <span class="highlight">flex items</span> properties.</p>
             </div>
             <!-- Justify Content: Initial Ends -->
         </div>
@@ -729,7 +785,7 @@
     <!-- Align-Items Master Section Begins-->
     <section class="multi-container">
         <h3 class="subheader" id="align-items">Align-Items</h3>
-        <p class="bold">The <span class="highlight">align-items</span> property aligns flex items along the <span class="highlight">cross axis</span> of the flex container. It can also be used to distribute space between and around flex items along the <span class="highlight">cross axis</span> of the flex container.</p>
+        <p class="bold">The <span class="highlight">align-items</span> property aligns <span class="highlight">flex items</span> along the <span class="highlight">cross axis</span> of the <span class="highlight">flex container</span>. It can also be used to distribute space between and around <span class="highlight">flex items</span> along the <span class="highlight">cross axis</span> of the <span class="highlight">flex container</span>. Useful for centering text/icons within buttons or list <span class="highlight">items</span>.</p>
         <!-- Wrapper for all Align-Items Begins -->
         <div class="wrapper multi-flex">
             <!-- Align-Items: Stretch Begins-->
@@ -740,8 +796,8 @@
                     <div class="item">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Items: Stretch</span> stretches flex items to fill the <span class="highlight">cross axis</span> of the flex container. This is the <span class="highlight">default setting</span>. This will not work if flex items have set measurements. If measurements are set for items, all items will stretch to the size of the largest flex item.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Items: Stretch</span> stretches <span class="highlight">flex items</span> to fill the <span class="highlight">cross axis</span> of the <span class="highlight">flex container</span>. This is the <span class="highlight">default setting</span>. This will not work if <span class="highlight">flex items</span> have set measurements. If measurements are set for <span class="highlight">items</span>, all <span class="highlight">items</span> will stretch to the size of the largest <span class="highlight">flex item</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Items: Stretch Ends-->
             <!-- Align-Items: Flex-Start Begins-->
@@ -752,8 +808,8 @@
                     <div class="item set-item">B</div>
                     <div class="item set-item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Items: Flex-Start</span> aligns flex items to the start of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Items: Flex-Start</span> aligns <span class="highlight">flex items</span> to the start of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Items: Flex-Start Ends-->
             <!-- Align-Items: Flex-End Begins-->
@@ -764,8 +820,8 @@
                     <div class="item set-item">B</div>
                     <div class="item set-item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Items: Flex-End</span> aligns flex items to the end of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Items: Flex-End</span> aligns <span class="highlight">flex items</span> to the end of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Items: Flex-End Ends-->
             <!-- Align-Items: Center Begins-->
@@ -776,8 +832,8 @@
                     <div class="item set-item">B</div>
                     <div class="item set-item">C</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Items: Center</span> aligns flex items to the center of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Items: Center</span> aligns <span class="highlight">flex items</span> to the center of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Items: Center Ends-->
             <!-- Baseline and Inherit/Initial Group Begins -->
@@ -790,8 +846,8 @@
                         <div class="item set-item">B<br>B</div>
                         <div class="item set-item">C<br>C<br>C</div>
                     </div>
-                    <p class="description"><span class="highlight">Align-Items: Baseline</span> aligns flex items based on the baseline of the text. The baseline is the bottom line of the first line of text.</p>
-                    <p class="notation">This alignment only works along a single flex line. The alignment is only noticable if <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set. If <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, the alignment will work the same way as <span class="highlight notation">align-items: flex-start</span>.</p>
+                    <p class="description"><span class="highlight">Align-Items: Baseline</span> aligns <span class="highlight">flex items</span> based on the baseline of the text. The baseline is the bottom line of the first line of text.</p>
+                    <p class="notation">This alignment only works along a single <span class="highlight notation">flex line</span>. The alignment is only noticable if the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>. If the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, the alignment will work the same way as <span class="highlight notation">align-items: flex-start</span>.</p>
                 </div>
                 <!-- Align-Items: Baseline Ends-->
                 <!-- Group for Align-Items Inherit and Initial Begins -->
@@ -806,7 +862,7 @@
                     <!-- Align-Items: Initial Begins -->
                     <div class="wrapper-items container-width">
                         <p class="title" id="align-items-initial">Align-Items: Initial</p>
-                        <p class="description"><span class="highlight">Align-Items: Initial</span> sets the <span class="highlight">align-items</span> value to the default valueof the flex items properties.</p>
+                        <p class="description"><span class="highlight">Align-Items: Initial</span> sets the <span class="highlight">align-items</span> value to the default valueof the <span class="highlight">flex items</span> properties.</p>
                     </div>
                     <!-- Align-Items: Initial Ends -->
                 </div>
@@ -822,7 +878,7 @@
     <!-- Align-Content Master Section Begins-->
     <section class="multi-container">
         <h3 class="subheader" id="align-content">Align-Content</h3>
-        <p class="bold">The <span class="highlight">align-content</span> property aligns flex lines within the flex container along the <span class="highlight">cross axis</span> of the flex container. This property only works when <span class="highlight">flex-flow: wrap</span> or <span class="highlight">flex-flow: wrap-reverse</span> is set and there are 2 or more flex lines.</p>
+        <p class="bold">The <span class="highlight">align-content</span> property aligns <span class="highlight">flex lines</span> within the <span class="highlight">flex container</span> along the <span class="highlight">cross axis</span> of the <span class="highlight">flex container</span>. This property only works when <span class="highlight">flex-flow: wrap</span> or <span class="highlight">flex-flow: wrap-reverse</span> is set and there are 2 or more <span class="highlight">flex lines</span>. Good for controlling spacing between <span class="highlight">rows</span> in a grid-like <span class="highlight">flex</span> layout.</p>
         <!-- Wrapper for all Align-Content Begins -->
         <div class="wrapper multi-flex">
             <!-- Align-Content: Stretch Begins-->
@@ -839,8 +895,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Stretch</span> stretches flex lines to fill the <span class="highlight">cross axis</span> of the flex container. This is the <span class="highlight">default setting</span>. This will not work if flex items have set measurements. If measurements are set for items, all flex lines will stretch to the size of the largest flex item.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Stretch</span> stretches <span class="highlight">flex lines</span> to fill the <span class="highlight">cross axis</span> of the <span class="highlight">flex container</span>. This is the <span class="highlight">default setting</span>. This will not work if <span class="highlight">flex items</span> have set measurements. If measurements are set for <span class="highlight">items</span>, all <span class="highlight">flex lines</span> will stretch to the size of the largest <span class="highlight">flex item</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Stretch Ends-->
             <!-- Align-Content: Flex-Start Begins-->
@@ -857,8 +913,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Flex-Start</span> aligns flex lines to the start of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Flex-Start</span> aligns <span class="highlight">flex lines</span> to the start of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Flex-Start Ends-->
             <!-- Align-Content: Flex-End Begins-->
@@ -875,8 +931,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Flex-End</span> aligns flex lines to the end of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Flex-End</span> aligns <span class="highlight">flex lines</span> to the end of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Flex-End Ends-->
             <!-- Align-Content: Center Begins-->
@@ -893,8 +949,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Center</span> aligns flex lines to the center of the <span class="highlight">cross axis</span>.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Center</span> aligns <span class="highlight">flex lines</span> to the center of the <span class="highlight">cross axis</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Center Ends-->
             <!-- Align-Content: Space-Between Begins-->
@@ -911,8 +967,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Space-Between</span> distributes space between flex lines along the <span class="highlight">cross axis</span>. It does not add space between the cross start and the first flex line, or between the cross end and the last flex line.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Space-Between</span> distributes space between <span class="highlight">flex lines</span> along the <span class="highlight">cross axis</span>. It does not add space between the cross start and the first <span class="highlight">flex line</span>, or between the cross end and the last <span class="highlight">flex line</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Space-Between Ends-->
             <!-- Align-Content: Space-Around Begins-->
@@ -929,8 +985,8 @@
                     <div class="item letters">HHHHHHHH</div>
                     <div class="item letters">IIIIIIIII</div>
                 </div>
-                <p class="description"><span class="highlight">Align-Content: Space-Around</span> distributes space around flex lines along the <span class="highlight">cross axis</span>. It adds space before the first flex line and after the last flex line, and equal space between each flex line. The space added before the first flex line and after the last flex line is typically half the size of the space between each flex line.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description"><span class="highlight">Align-Content: Space-Around</span> distributes space around <span class="highlight">flex lines</span> along the <span class="highlight">cross axis</span>. It adds space before the first <span class="highlight">flex line</span> and after the last <span class="highlight">flex line</span>, and equal space between each <span class="highlight">flex line</span>. The space added before the first <span class="highlight">flex line</span> and after the last <span class="highlight">flex line</span> is typically half the size of the space between each <span class="highlight">flex line</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
             <!-- Align-Content: Space-Around Ends-->
             <!-- Space-Evenly and Inherit/Initial Group Begins -->
@@ -949,8 +1005,8 @@
                         <div class="item letters">HHHHHHHH</div>
                         <div class="item letters">IIIIIIIII</div>
                     </div>
-                    <p class="description"><span class="highlight">Align-Content: Space-Evenly</span> distributes space evenly between flex lines along the <span class="highlight">cross axis</span>. It adds space before the first flex line and after the last flex line, and equal space between each flex line. The space added before the first flex line and after the last flex line is equal to the space between each flex line.</p>
-                    <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                    <p class="description"><span class="highlight">Align-Content: Space-Evenly</span> distributes space evenly between <span class="highlight">flex lines</span> along the <span class="highlight">cross axis</span>. It adds space before the first <span class="highlight">flex line</span> and after the last <span class="highlight">flex line</span>, and equal space between each <span class="highlight">flex line</span>. The space added before the first <span class="highlight">flex line</span> and after the last <span class="highlight">flex line</span> is equal to the space between each <span class="highlight">flex line</span>.</p>
+                    <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
                 </div>
                 <!-- Align-Content: Space-Evenly Ends-->
                 <!-- Group for Align-Content Inherit and Initial Begins -->
@@ -965,7 +1021,7 @@
                     <!-- Align-Content: Initial Begins -->
                     <div class="wrapper-items container-width">
                         <p class="title" id="align-content-initial">Align-Content: Initial</p>
-                        <p class="description"><span class="highlight">Align-Content: Initial</span> sets the <span class="highlight">align-content</span> value to the default value of the flex items properties.</p>
+                        <p class="description"><span class="highlight">Align-Content: Initial</span> sets the <span class="highlight">align-content</span> value to the default value of the <span class="highlight">flex items</span> properties.</p>
                     </div>
                     <!-- Align-Content: Initial Ends -->
                 </div>
@@ -981,7 +1037,7 @@
     <!-- Gap Master Section Begins -->
     <section class="multi-container">
         <h3 class="subheader" id="gap-properties">The Gap Properties</h3>
-        <p class="bold">The <span class="highlight">gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
+        <p class="bold">The <span class="highlight">gap</span> properties add consistent spacing between <span class="highlight">flex items</span>. It never adds space before the first <span class="highlight">flex item</span> or after the last <span class="highlight">flex item</span>. It simply creates equal space between <span class="highlight">items</span> within the <span class="highlight">container</span>.</p>
         <!-- Wrapper for all Gap Begins -->
         <div class="wrapper multi-flex">
             <!-- Gap Shorthand Begins -->
@@ -1031,13 +1087,13 @@
             <!-- Column-Gap and Row-Gap Begins -->
             <section class="multi-container column-row-gap">
                 <h4 class="subheader-small" id="column-row-gap">Column-Gap and Row-Gap</h4>
-                <p class="bold">The <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties add consistent spacing between flex items. It never adds space before the first flex item or after the last flex item. It simply creates equal space between items within the container.</p>
+                <p class="bold">The <span class="highlight">column-gap</span> and <span class="highlight">row-gap</span> properties add consistent spacing between <span class="highlight">flex items</span>. It never adds space before the first <span class="highlight">flex item</span> or after the last <span class="highlight">flex item</span>. It simply creates equal space between <span class="highlight">items</span> within the <span class="highlight">container</span>.</p>
                 <!-- Wrapper for all Column-Gap and Row-Gap Begins -->
                 <div class="wrapper multi-flex">
                     <!-- Column-Gap Begins -->
                     <div class="wrapper-items container-width">
                         <p class="title" id="column-gap">Column-Gap</p>
-                        <p class="bold">The <span class="highlight">column-gap</span> property adds consistent <span class="highlight">horizontal</span> spacing between flex items. This is the case no matter the value that is set for <span class="highlight">flex-direction</span>.</p>
+                        <p class="bold">The <span class="highlight">column-gap</span> property adds consistent <span class="highlight">horizontal</span> spacing between <span class="highlight">flex items</span>. This is the case no matter the value that is set for <span class="highlight">flex-direction</span>.</p>
                         <div class="container flex width column-gap-container">
                             <div class="item">A</div>
                             <div class="item">B</div>
@@ -1052,7 +1108,7 @@
                     <!-- Row-Gap Begins -->
                     <div class="wrapper-items container-width">
                         <p class="title" id="row-gap">Row-Gap</p>
-                        <p class="bold">The <span class="highlight">row-gap</span> property adds consistent <span class="highlight">vertical</span> spacing between flex items. It is always apparent when <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, it is not apparent unless the items wrap to two or more flex lines.</p>
+                        <p class="bold">The <span class="highlight">row-gap</span> property adds consistent <span class="highlight">vertical</span> spacing between <span class="highlight">flex items</span>. It is always apparent when the <span class="highlight">flex-direction</span> is related to the <span class="highlight">column</span>. When the <span class="highlight">flex-direction</span> is related to the <span class="highlight">row</span>, it is not apparent unless the items wrap to two or more <span class="highlight">flex lines</span>.</p>
                         <div class="container flex width row-gap-container">
                             <div class="item">A</div>
                             <div class="item">B</div>
@@ -1078,19 +1134,19 @@
     <!-- Flex Item Properties Section Begins-->
     <section class="item-properties">
         <h2 class="header" id="flex-item">Flex Item Properties</h2>
-        <p class="bold">The following properties are set on individual flex items. They are used to control the behavior of the flex items within the container.</p>
+        <p class="bold">The following properties are set on individual <span class="highlight">flex items</span>. They are used to control the behavior of the <span class="highlight">flex items</span> within the <span class="highlight">container</span>.</p>
         <!-- Wrapper for all Flex Item Properties Begins -->
         <div class="wrapper multi-flex">
             <!-- Flex, Flex-Grow, Flex-Shrink, and Flex-Basis Begins -->
             <section class="multi-container flex-properties">
                 <h3 class="subheader" id="flex-properties">The Flex Properties</h3>
-                <p class="bold">The <span class="highlight">flex</span> properties are used to control the sizing behavior of flex items. The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the dimensions of the flex container if the items are overflowing. The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. These can all be combined using the shorthand <span class="highlight">flex</span> property. When <span class="highlight">flex-direction: row</span> or <span class="highlight">flex-direction: row-reverse</span> is set, the width of the items is affected. When <span class="highlight">flex-direction: column</span> or <span class="highlight">flex-direction: column-reverse</span> is set, the height of the items is affected. These properties will not override any max-width, min-width, max-height, or min-height properties if they have been set for the item. However, they will override any standard width or height properties if they have been set.</p>
+                <p class="bold">The <span class="highlight">flex</span> properties are used to control the sizing behavior of <span class="highlight">flex items</span>. The <span class="highlight">flex-grow</span> property controls the <span class="highlight">flex items</span> ability to grow to fill the available space of the <span class="highlight">flex container</span>. The <span class="highlight">flex-shrink</span> property controls the <span class="highlight">flex items</span> ability to shrink to fit the dimensions of the <span class="highlight">flex container</span> if the <span class="highlight">items</span> are overflowing. The <span class="highlight">flex-basis</span> property controls the initial size of the <span class="highlight">flex item</span> before any growth or shrinkage occurs. These can all be combined using the shorthand <span class="highlight">flex</span> property. When the <span class="highlight">flex-direction</span> is related to the <span class="highlight">row</span>, the <span class="highlight">width</span> of the <span class="highlight">items</span> is affected. When the <span class="highlight">flex-direction</span> is related to the <span class="highlight">column</span>, the <span class="highlight">height</span> of the <span class="highlight">items</span> is affected. These properties will not override any <span class="highlight">max-width</span>, <span class="highlight">min-width</span>, <span class="highlight">max-height</span>, or <span class="highlight">min-height</span> properties if they have been set for the <span class="highlight">item</span>. However, they will override any standard <span class="highlight">width</span> or <span class="highlight">height</span> properties if they have been set.</p>
                 <!-- Flex-Grow Begins -->
                 <article class="flex-grow-section">
                     <h4 class="subheader-small" id="flex-grow">Flex-Grow</h4>
-                    <p class="bold">The <span class="highlight">flex-grow</span> property controls the flex items ability to grow to fill the available space of the flex container. The <span class="highlight">default value</span> is 0 which means the flex items do not grow by default. If the value is set to 1, the flex item will grow to fill the available space of the flex container. If the value is set to 2, the flex item will grow to fill twice the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting grows.</p>
+                    <p class="bold">The <span class="highlight">flex-grow</span> property controls the <span class="highlight">flex items</span> ability to grow to fill the available space of the <span class="highlight">flex container</span>. The <span class="highlight">default value</span> is 0 which means the <span class="highlight">flex items</span> do not grow by default. If the value is set to 1, the <span class="highlight">flex item</span> will grow to fill the available space of the <span class="highlight">flex container</span>. If the value is set to 2, the <span class="highlight">flex item</span> will grow to fill twice the available space, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other <span class="highlight">flex items</span> in the <span class="highlight">container</span> are considered when the <span class="highlight">flex item</span> with this setting grows.</p>
                     <p class="title" id="flex-grow-formula">Flex-Grow Formula</p>
-                    <p class="bold">The size that the flex items will grow to fill the container can be determined by using all of the following calculations:</p>
+                    <p class="bold">The size that the <span class="highlight">flex items</span> will grow to fill the <span class="highlight">container</span> can be determined by using all of the following calculations:</p>
                     <ul class="wider-list no-bullet formula-list">
                         <li class="bg1">Base Size = Sum of All Item Sizes </li>
                         <li class="bg2">Available Space = Container Size - Base Size </li>
@@ -1108,7 +1164,7 @@
 
                     <div class="flex-grow-example-block">
                         <div class="flex-grow-example-step">
-                            <p class="written-example-text">The height of the flex container is 600px.<br>
+                            <p class="written-example-text">The <span class="highlight written-example-text">height</span> of the <span class="highlight written-example-text">flex container</span> is 600px.<br>
                             It is set to flex-direction: column.</p>
                             <img src="Images/Written Container Height Flex Direction.png" class="flex-grow-shrink-example-image">
                         </div>
@@ -1236,7 +1292,7 @@
                                     width: 106.67px
                                 </div>
                             </div>
-                            <p class="example-text"> Since the value is 1 for all items, they will all grow to fill the available space equally. This means each item will grow approximately 26.67px (80px / 3 = 26.67px). This gives each item a width of 106.67px (80px + 26.67px = 106.67px).</p>
+                            <p class="example-text"> Since the value is 1 for all <span class="highlight example-text">items</span>, they will all grow to fill the available space equally. This means each <span class="highlight example-text">item</span> will grow approximately 26.67px (80px / 3 = 26.67px). This gives each <span class="highlight example-text">item</span> a <span class="highlight example-text">width</span> of 106.67px (80px + 26.67px = 106.67px).</p>
                         </div>
                         <!-- Flex-Grow Example 1 Ends -->
                         <!-- Flex-Grow Example 2 Begins -->
@@ -1256,7 +1312,7 @@
                                     width: 160px
                                 </div>
                             </div>
-                            <p class="example-text"> Since the value is 0 for items A and B, they will not grow. Item C will grow to fill all of the available space. This means it will grow approximately 80px. This makes the total width for item C 160px (80px + 80px = 160px).</p>
+                            <p class="example-text"> Since the value is 0 for <span class="highlight example-text">items</span> A and B, they will not grow. <span class="highlight example-text">Item</span> C will grow to fill all of the available space. This means it will grow approximately 80px. This makes the total <span class="highlight example-text">width</span> for <span class="highlight example-text">item</span> C 160px (80px + 80px = 160px).</p>
                         </div>
                         <!-- Flex-Grow Example 2 Ends -->
                         <!-- Flex-Grow Example 3 Begins -->
@@ -1276,7 +1332,7 @@
                                     width: 133.33px
                                 </div>
                             </div>
-                            <p class="example-text">Since the value is 0 for item A, it will not grow. Item B has a value of 1, while item C has a value of 2. This means that item b will take up 1/3 of the available space, while item C will take up 2/3 of the available space. When the available space is divided by 3, the result is 26.67px (80px / 3 = 26.67px). This means item B will grow to 106.67px (80px + 26.67px = 106.67px) and item C will grow to 133.33px (80px + 26.67px + 26.67px = 133.33px).</p>
+                            <p class="example-text">Since the value is 0 for <span class="highlight example-text">item</span> A, it will not grow. <span class="highlight example-text">Item</span> B has a value of 1, while <span class="highlight example-text">item</span> C has a value of 2. This means that <span class="highlight example-text">item</span> b will take up 1/3 of the available space, while <span class="highlight example-text">item</span> C will take up 2/3 of the available space. When the available space is divided by 3, the result is 26.67px (80px / 3 = 26.67px). This means <span class="highlight example-text">item</span> B will grow to 106.67px (80px + 26.67px = 106.67px) and <span class="highlight example-text">item</span> C will grow to 133.33px (80px + 26.67px + 26.67px = 133.33px).</p>
                         </div>
                         <!-- Flex-Grow Example 3 Ends -->
                     </div>
@@ -1287,9 +1343,9 @@
                 <!-- Flex-Shrink Begins -->
                 <article class="flex-shrink-section">
                     <h4 class="subheader-small" id="flex-shrink">Flex-Shrink</h4>
-                    <p class="bold">The <span class="highlight">flex-shrink</span> property controls the flex items ability to shrink to fit the flex container if the items are overflowing. The <span class="highlight">default value</span> is 1 which means the flex items will shrink to fit the flex container if they are overflowing. If the value is set to 0, the flex item will not shrink. If the value is set to 2, the flex item will shrink twice the amount to fit the container, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other flex items in the container are considered when the flex item with this setting shrinks. Unlike the <span class="highlight">flex-grow</span> property, the <span class="highlight">flex-shrink</span> property requires a shrink percentage to be calculated when items are different sizes.</p>
+                    <p class="bold">The <span class="highlight">flex-shrink</span> property controls the <span class="highlight">flex items</span> ability to shrink to fit the <span class="highlight">flex container</span> if the <span class="highlight">items</span> are overflowing. The <span class="highlight">default value</span> is 1 which means the <span class="highlight">flex items</span> will shrink to fit the <span class="highlight">flex container</span> if they are overflowing. If the value is set to 0, the <span class="highlight">flex item</span> will not shrink. If the value is set to 2, the <span class="highlight">flex item</span> will shrink twice the amount to fit the <span class="highlight">container</span>, etc. The number must always be positive. Decimals are also accepted. The sizing is proportional and the settings for all other <span class="highlight">flex items</span> in the <span class="highlight">container</span> are considered when the <span class="highlight">flex item</span> with this setting shrinks. Unlike the <span class="highlight">flex-grow</span> property, the <span class="highlight">flex-shrink</span> property requires a shrink percentage to be calculated when <span class="highlight">items</span> are different sizes.</p>
                     <p class="title" id="flex-shrink-formula">Flex-Shrink Formula</p>
-                    <p class="bold">The size that the flex items will shrink to fit the container can be calculated in a similar way to the <span class="highlight">flex-grow</span> formula when all flex items are the same size. However, when the flex items are different sizes, the formula is slightly more complex as shown in the following calculations:</p>
+                    <p class="bold">The size that the <span class="highlight">flex items</span> will shrink to fit the <span class="highlight">container</span> can be calculated in a similar way to the <span class="highlight">flex-grow</span> formula when all <span class="highlight">flex items</span> are the same size. However, when the <span class="highlight">flex items</span> are different sizes, the formula is slightly more complex as shown in the following calculations:</p>
                     <ul class="wider-list no-bullet formula-list">
                         <li class="bg1">Base Size = Sum of All Item Sizes </li>
                         <li class="bg2">Overflow Amount = Base Size - Container Size </li>
@@ -1307,7 +1363,7 @@
 
                     <div class="flex-shrink-example-block">
                         <div class="flex-shrink-example-step">
-                            <p class="written-example-text">The height of the flex container is 600px.<br>
+                            <p class="written-example-text">The <span class="highlight written-example-text">height</span> of the <span class="highlight written-example-text">flex container</span> is 600px.<br>
                             It is set to flex-direction: column.</p>
                             <img src="Images/Written Container Height Flex Direction.png" class="flex-grow-shrink-example-image">
                         </div>
@@ -1411,7 +1467,7 @@
 
 
 
-                    <p class="notation">The following three examples demonstrate the <span class="highlight notation">flex-shrink</span> property with flex items that are all the same size. The following information will be valid for the first 3 examples:</p>
+                    <p class="notation">The following three examples demonstrate the <span class="highlight notation">flex-shrink</span> property with <span class="highlight notation">flex items</span> that are all the same size. The following information will be valid for the first 3 examples:</p>
                     <ul>
                         <li class="smaller-list-text">The flex container has a static width of 320px.</li>
                         <li class="smaller-list-text">All 3 flex items have a set width of 160px with no padding or margins, which means the minimum amount of space they will take up is 480px (160px x 3 = 480px).</li>
@@ -1435,7 +1491,7 @@
                                 width: 160px
                             </div>
                         </div>
-                        <p class="example-text"> Since the value is 0 for all items, they will not shrink. This means the items will remain at their minimum width of 160px which will cause them to overflow the container by 160px (160px + 160px + 160px = 480px - 320px = 160px) since wrapping is not set.</p>
+                        <p class="example-text"> Since the value is 0 for all <span class="highlight example-text">items</span>, they will not shrink. This means the <span class="highlight example-text">items</span> will remain at their minimum <span class="highlight example-text">width</span> of 160px which will cause them to overflow the <span class="highlight example-text">container</span> by 160px (160px + 160px + 160px = 480px - 320px = 160px) since wrapping is not set.</p>
                     </div>
                     <!-- Flex-Shrink Example 1 Ends -->
                     <br>
@@ -1457,7 +1513,7 @@
                                     width: 80px
                                 </div>
                             </div>
-                            <p class="example-text">Since the value is 0 for item A, it will not shrink. Items B and C have a value of 1, so they will shrink to fit the space of the container. In this case, both B and C would shrink by 1/2 of the overflow width, which is 80px (160px / 2 = 80px). This means item B and C will shrink to 80px (160px - 80px = 80px).</p>
+                            <p class="example-text">Since the value is 0 for <span class="highlight example-text">item</span> A, it will not shrink. <span class="highlight example-text">Items</span> B and C have a value of 1, so they will shrink to fit the space of the <span class="highlight example-text">container</span>. In this case, both B and C would shrink by 1/2 of the overflow <span class="highlight example-text">width</span>, which is 80px (160px / 2 = 80px). This means <span class="highlight example-text">item</span> B and C will shrink to 80px (160px - 80px = 80px).</p>
                         </div>
                         <!-- Flex-Shrink Example 2 Ends -->
                         <!-- Flex-Shrink Example 3 Begins -->
@@ -1477,7 +1533,7 @@
                                     width: 80px
                                 </div>
                             </div>
-                            <p class="example-text">In this example, all 3 items will shrink to fit the container by different amounts. Item A has a value of 1, item B has a value of 2, and item C has a value of 3. This means item A will shrink by 1/6 of the overflow width, item B will shrink by 2/6 of the overflow width, and item C will shrink by 3/6 of the overflow width. The overflow width needs to be divided by 6 parts in this case (1 + 2 + 3 = 6). This gives us a unit number of 26.66px (160px / 6 = 26.66px). This means item A will shrink to 133.33px (160px - 26.66px = 133.33px), item B will shrink to 106.66px (160px - 53.33px = 106.66px), and item C will shrink to 80px (160px - 80px = 80px).</p>
+                            <p class="example-text">In this example, all 3 <span class="highlight example-text">items</span> will shrink to fit the <span class="highlight example-text">container</span> by different amounts. <span class="highlight example-text">Item</span> A has a value of 1, <span class="highlight example-text">item</span> B has a value of 2, and <span class="highlight example-text">item</span> C has a value of 3. This means <span class="highlight example-text">item</span> A will shrink by 1/6 of the overflow <span class="highlight example-text">width</span>, <span class="highlight example-text">item</span> B will shrink by 2/6 of the overflow <span class="highlight example-text">width</span>, and <span class="highlight example-text">item</span> C will shrink by 3/6 of the overflow <span class="highlight example-text">width</span>. The overflow <span class="highlight example-text">width</span> needs to be divided by 6 parts in this case (1 + 2 + 3 = 6). This gives us a unit number of 26.66px (160px / 6 = 26.66px). This means <span class="highlight example-text">item</span> A will shrink to 133.33px (160px - 26.66px = 133.33px), <span class="highlight example-text">item</span> B will shrink to 106.66px (160px - 53.33px = 106.66px), and <span class="highlight example-text">item</span> C will shrink to 80px (160px - 80px = 80px).</p>
                         </div>
                         <!-- Flex-Shrink Example 3 Ends -->
                     </div>
@@ -1488,7 +1544,7 @@
                 <!-- Flex-Basis Begins -->
                 <article class="flex-basis-section">
                     <h4 class="subheader-small" id="flex-basis">Flex-Basis</h4>
-                    <p class="bold">The <span class="highlight">flex-basis</span> property controls the initial size of the flex item before any growth or shrinkage occurs. The <span class="highlight">default value</span> is auto which means the initial size of the flex item is determined by the width (if the <span class="highlight">flex-direction</span> is row based) or height (if the <span class="highlight">flex-direction</span> is column based) set for the item. The value can be a length, a percentage, or an initial or inherit value. If a length or percentage is set for the <span class="highlight">flex-basis</span> property, it will override the width or height set for the item UNLESS it is min-width, max-width, min-height, or max-height. When a percentage is used as the value, it is relative to the width of the flex container.</p>
+                    <p class="bold">The <span class="highlight">flex-basis</span> property controls the initial size of the <span class="highlight">flex item</span> before any growth or shrinkage occurs. The <span class="highlight">default value</span> is auto which means the initial size of the <span class="highlight">flex item</span> is determined by the <span class="highlight">width</span> (if the <span class="highlight">flex-direction</span> is <span class="highlight">row</span> based) or <span class="highlight">height</span> (if the <span class="highlight">flex-direction</span> is <span class="highlight">column</span> based) set for the <span class="highlight">item</span>. The value can be a length, a percentage, or an initial or inherit value. If a length or percentage is set for the <span class="highlight">flex-basis</span> property, it will override the <span class="highlight">width</span> or <span class="highlight">height</span> set for the <span class="highlight">item</span> UNLESS it is <span class="highlight">min-width</span>, <span class="highlight">max-width</span>, <span class="highlight">min-height</span>, or <span class="highlight">max-height</span>. When a percentage is used as the value, it is relative to the <span class="highlight">width</span> of the <span class="highlight">flex container</span>.</p>
                     <p class="notation">The following information will be valid for this example:</p>
                     <ul>
                         <li class="smaller-list-text">The flex container has a static width of 320px.</li>
@@ -1573,7 +1629,7 @@
         <br>
         <!-- Align-Self Master Section Begins -->
         <h3 class="subheader" id="align-self">Align-Self</h3>
-        <p class="bold">The <span class="highlight">align-self</span> property allows the flex item to override the <span class="highlight">align-items</span> value that is set for the container. It can be used to align the item to the start, end, center, or baseline of the <span class="highlight">cross axis</span>.</p>
+        <p class="bold">The <span class="highlight">align-self</span> property allows the <span class="highlight">flex item</span> to override the <span class="highlight">align-items</span> value that is set for the <span class="highlight">container</span>. It can be used to align the <span class="highlight">item</span> to the start, end, center, or baseline of the <span class="highlight">cross axis</span>. Great for when one <span class="highlight">flex item</span> needs to stand out.</p>
         <div class="wrapper multi-flex">
             <div class="wrapper-items container-width">
                 <p class="title" id="align-items-example">Align-Items Example</p>
@@ -1582,8 +1638,8 @@
                     <div class="item align-self-end">B</div>
                     <div class="item">C</div>
                 </div>
-                <p class="description">The above example has a flex container with the <span class="highlight">align-items</span> property set to flex-start. The <span class="highlight">align-self</span> property is set to flex-end for item B, which overrides the <span class="highlight">align-items: flex-start</span> value in the flex container.</p>
-                <p class="notation">When <span class="highlight notation">flex-direction: row</span> or <span class="highlight notation">flex-direction: row-reverse</span> is set, this will be <span class="highlight notation">vertical</span>. When <span class="highlight notation">flex-direction: column</span> or <span class="highlight notation">flex-direction: column-reverse</span> is set, this will be <span class="highlight notation">horizontal</span>.</p>
+                <p class="description">The above example has a <span class="highlight">flex container</span> with the <span class="highlight">align-items</span> property set to flex-start. The <span class="highlight">align-self</span> property is set to flex-end for item B, which overrides the <span class="highlight">align-items: flex-start</span> value in the <span class="highlight">flex container</span>.</p>
+                <p class="notation">When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">row</span>, this will be <span class="highlight notation">vertical</span>. When the <span class="highlight notation">flex-direction</span> is related to the <span class="highlight notation">column</span>, it will be <span class="highlight notation">horizontal</span>.</p>
             </div>
         </div>
         <!-- Align-Self Master Section Ends -->
@@ -1591,7 +1647,7 @@
         <br>
         <!-- Order Master Section Begins -->
         <h3 class="subheader" id="order">Order</h3>
-        <p class="bold">The <span class="highlight">order</span> property allows the flex item to override the order of the flex items in the container. By <span class="highlight">default</span>, the order of the flex items is set to 0 which means that the HTML elements are listed in the same order that they are listed in the HTML document. If a reverse direction is set for the <span class="highlight">flex-direction</span> property, the order of the flex items will be listed in the reverse order that they are listed in the HTML document. To completely customize the order of the flex items, the <span class="highlight">order</span> property can be used.</p>
+        <p class="bold">The <span class="highlight">order</span> property allows the <span class="highlight">flex item</span> to override the order of the <span class="highlight">flex items</span> in the <span class="highlight">container</span>. By <span class="highlight">default</span>, the order of the <span class="highlight">flex items</span> is set to 0 which means that the HTML elements are listed in the same order that they are listed in the HTML document. If a reverse direction is set for the <span class="highlight">flex-direction</span> property, the order of the <span class="highlight">flex items</span> will be listed in the reverse order that they are listed in the HTML document. To completely customize the order of the <span class="highlight">flex items</span>, the <span class="highlight">order</span> property can be used. Useful for when the visual order needs to differ from the source order (ex: responsive layouts where mobile stacking differs from desktop).</p>
         <div class="wrapper multi-flex">
             <div class="wrapper-items container-width">
                 <p class="title" id="order-example">Order Example</p>
@@ -1600,7 +1656,7 @@
                     <div class="item order1">B</div>
                     <div class="item order2">C</div>
                 </div>
-                <p class="description">The above example has a flex container with the <span class="highlight">order</span> property set to 3 for item A, 1 for item B, and 2 for item C. This means that item A will be the last item in the container, item B will be the first item in the container, and item C will be the second item in the flex container.</p>
+                <p class="description">The above example has a <span class="highlight">flex container</span> with the <span class="highlight">order</span> property set to 3 for <span class="highlight">item</span> A, 1 for <span class="highlight">item</span> B, and 2 for <span class="highlight">item</span> C. This means that <span class="highlight">item</span> A will be the last <span class="highlight">item</span> in the <span class="highlight">container</span>, <span class="highlight">item</span> B will be the first <span class="highlight">item</span> in the <span class="highlight">container</span>, and <span class="highlight">item</span> C will be the second <span class="highlight">item</span> in the <span class="highlight">flex container</span>.</p>
             </div>
         </div>
         <!-- Order Master Section Ends -->
@@ -1611,5 +1667,89 @@
 
     </section>
     <!-- Flex Item Properties Section Ends-->
+
+    <!-- Flexbox Summary Section Begins-->
+    <section>
+        <h2 class="header" id="flex-summary">Flexbox Summary</h2>
+        <p class="bold"><span class="highlight">Flexbox</span> works by running a layout algorithm on a <span class="highlight">flex container</span> and its direct children (called <span class="highlight">flex items</span>). <span class="highlight">Flexbox</span> is not about setting exact sizes — it's about negotiation between size of <span class="highlight">items</span> and the space of the <span class="highlight">container</span>.</p>
+        <div class="wrapper">
+            <h3 class="subheader" id="flex-mental-model">The Flexbox Mental Model</h3>
+            <p class="bold">Here is the mental model to keep in your head:</p>
+            <div style="text-align: center;">
+                <ol style="list-style-type: decimal; padding-left: 30px; margin: 0 auto; width: fit-content; display: inline-block; text-align: left;">
+                    <li style="position: static; padding-left: 0; display: list-item;">The <span class="highlight">flex container</span> establishes a <span class="highlight">main axis</span> and a <span class="highlight">cross axis</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">Each <span class="highlight">flex item</span> starts with a base size.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">The browser compares total <span class="highlight">item</span> sizes to <span class="highlight">container</span> size.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">Extra space is distributed using <span class="highlight">flex-grow</span> in the <span class="highlight">flex container</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">Overflow is resolved using <span class="highlight">flex-shrink</span> in the <span class="highlight">flex container</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">Responsiveness is controlled using <span class="highlight">flex-basis</span> in the <span class="highlight">flex container</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;">Final alignment happens with <span class="highlight">justify-content</span>, <span class="highlight">align-items</span>, and <span class="highlight">align-content</span> for the <span class="highlight">flex container</span>; and <span class="highlight">align-self</span> in the <span class="highlight">flex item</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;"><span class="highlight">Gap</span> adds consistent spacing between <span class="highlight">flex items</span> and sometimes the <span class="highlight">flex container</span>.</li>
+                    <li style="position: static; padding-left: 0; display: list-item;"><span class="highlight">Order</span> places <span class="highlight">flex items</span> in a custom order within the <span class="highlight">flex container</span>.</li>
+                </ol>
+            </div>
+            <br>
+            <h3 class="subheader" id="flex-default-behavior" style="display: block; width: fit-content; margin-left: auto; margin-right: auto;">Default Flexbox Behavior</h3>
+            <p class="title" style="margin-bottom: 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto;">Default Flex Container Behavior</p>
+            <br>
+            <table class="table-width table-margin">
+                <thead>
+                    <tr class="table-headers">
+                        <th class="column-right-border nogridlines" style="text-align: left;">Property: Value</th>
+                        <th class="nogridlines" style="text-align: left;">What This Means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg1">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Display: Flex</td>
+                        <td class="nogridlines" style="text-align: left;">Items line up horizontally.</td>
+                    </tr>
+                    <tr class="bg2">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Flex-Direction: Row</td>
+                        <td class="nogridlines" style="text-align: left;">All items stay on a horizontal line.</td>
+                    </tr>
+                    <tr class="bg1">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Flex-Wrap: NoWrap</td>
+                        <td class="nogridlines" style="text-align: left;">Items that overflow the container will not be moved to new rows or columns.</td>
+                    </tr>
+                    <tr class="bg2">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Justify-Content: Flex-Start</td>
+                        <td class="nogridlines" style="text-align: left;">Items pack toward the start of the main axis.</td>
+                    </tr>
+                    <tr class="bg1">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Align-Items: Stretch</td>
+                        <td class="nogridlines" style="text-align: left;">Items stretch along the cross axis to match the tallest item.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p class="title" style="margin-bottom: 10px; display: block; width: fit-content; margin-left: auto; margin-right: auto;">Default Flex Item Behavior</p>
+            <br>
+            <table class="table-width table-margin">
+                <thead>
+                    <tr class="table-headers">
+                        <th class="column-right-border nogridlines" style="text-align: left;">Property: Value</th>
+                        <th class="nogridlines" style="text-align: left;">What This Means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg1">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Flex-Grow: 0</td>
+                        <td class="nogridlines" style="text-align: left;">Items do not grow to fill extra space in the container.</td>
+                    </tr>
+                    <tr class="bg2">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Flex-Shrink: 1</td>
+                        <td class="nogridlines" style="text-align: left;">Items are allowed to shrink if space is tight.</td>
+                    </tr>
+                    <tr class="bg1">
+                        <td class="column-right-border nogridlines" style="text-align: left;">Flex-Basis: Auto</td>
+                        <td class="nogridlines" style="text-align: left;">The item' size starts from its assigned width or height.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- Flexbox Summary Section Ends-->
+
 </body>
 </html>
